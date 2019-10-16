@@ -1,7 +1,7 @@
 Opt Out
 ==============================
 
-Our study ito online misogyny and how to model it
+Our study into online misogyny and how to model it
 
 Project Organization
 ------------
