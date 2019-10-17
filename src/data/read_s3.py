@@ -1,9 +1,8 @@
 import boto3
-from boto3_type_annotations.s3 import Client
 from botocore.exceptions import ClientError
 
 
-def download_dataset(s3_client: Client):
+def download_dataset(s3_client):
     """Downloads the stanford dataset."""
     try:
         s3_client.download_file(
