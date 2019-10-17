@@ -6,7 +6,7 @@ from tests.domain_objects_for_testing import create_dataframe_of_labeled_tweets
 
 
 @pytest.fixture
-def contractions_mapping():
+def contractions_mapping() -> pd.DataFrame:
     return pd.DataFrame(
         {
             "contraction": list(contractions().keys()),
@@ -16,5 +16,5 @@ def contractions_mapping():
 
 
 @pytest.fixture
-def labeled_tweets():
+def labeled_tweets() -> pd.DataFrame:
     return create_dataframe_of_labeled_tweets()

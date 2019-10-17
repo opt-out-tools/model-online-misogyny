@@ -1,5 +1,6 @@
-from typing import Callable
-from typing import List
+from typing import Callable, List
+
+import pandas as pd
 
 from src.data.preprocess_text_helpers import (
     contractions_unpacker,
@@ -25,7 +26,7 @@ class TextPreProcessingPipeline:
         return text
 
 
-def clean(dataframe):
+def clean(dataframe: pd.DataFrame) -> pd.DataFrame:
     """Returns cleaned text.
 
           Args
@@ -47,7 +48,7 @@ def clean(dataframe):
     return dataframe
 
 
-def normalize(dataframe):
+def normalize(dataframe: pd.DataFrame) -> pd.DataFrame:
     """Returns normalized text.
 
     Args
@@ -70,7 +71,7 @@ def normalize(dataframe):
     return dataframe
 
 
-def tokenize(dataframe):
+def tokenize(dataframe: pd.DataFrame) -> pd.DataFrame:
     """Returns tokenized text in string format.
 
        Args

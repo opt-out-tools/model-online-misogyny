@@ -1,7 +1,9 @@
+from typing import Dict
+
 import pandas as pd
 
 
-def preprocess_normalize():
+def preprocess_normalize() -> pd.DataFrame:
     tweets = [
         "rt <user> feminists take note <hashtag> <hashtag> <url>",
         "rt <user> antis stop treating blocks trophies soon feminists stop "
@@ -15,7 +17,7 @@ def preprocess_normalize():
     return pd.DataFrame({"normalized": tweets})
 
 
-def preprocess_tokenize():
+def preprocess_tokenize() -> pd.DataFrame:
     tweets = [
         "rt @asredasmyhair : feminists , take note . #femfreefriday "
         "#womenagainstfeminism http://t.co/j2hqzvj8cx",
@@ -30,7 +32,7 @@ def preprocess_tokenize():
     return pd.DataFrame({"tokenized": tweets})
 
 
-def preprocess_clean():
+def preprocess_clean() -> pd.DataFrame:
     tweets = [
         "rt @asredasmyhair feminists take note #femfreefriday "
         "#womenagainstfeminism http://t.co/j2hqzvj8cx",
@@ -43,7 +45,7 @@ def preprocess_clean():
     return pd.DataFrame({"cleaned": tweets})
 
 
-def create_pipeline_data(pipeline_name: str) -> pd.DataFrame:
+def create_pipeline_data(pipeline_name: str) -> Dict:
     """ Returns data processed according to the pipeline chosen.
 
     Args:
@@ -60,7 +62,7 @@ def create_pipeline_data(pipeline_name: str) -> pd.DataFrame:
     return pipeline[pipeline_name]
 
 
-def create_dataframe_of_labeled_tweets():
+def create_dataframe_of_labeled_tweets() -> pd.DataFrame:
     tweets = [
         "RT @asredasmyhair: Feminists, take note. #FemFreeFriday "
         "#WomenAgainstFeminism http://t.co/J2HqzVJ8Cx",

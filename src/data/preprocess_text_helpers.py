@@ -1,5 +1,5 @@
 import re
-from typing import Dict
+from typing import Dict, List
 
 from ekphrasis.classes.preprocessor import TextPreProcessor
 from ekphrasis.classes.tokenizer import SocialTokenizer
@@ -224,12 +224,12 @@ def normalizer(tweet: str) -> str:
     return preprocesser.pre_process_doc(tweet)
 
 
-def remove_stopwords(tweet):
+def remove_stopwords(tweet: str) -> str:
     """Returns a string of words with stop words removed."""
     return " ".join(word for word in tweet.split(" ") if word not in stopwords())
 
 
-def stopwords():
+def stopwords() -> List[str]:
     return [
         "i",
         "like",
