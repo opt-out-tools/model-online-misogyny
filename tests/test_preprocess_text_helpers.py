@@ -1,8 +1,9 @@
-from src.data.preprocess_text_helpers import contractions_unpacker
-from src.data.preprocess_text_helpers import lowercase
-from src.data.preprocess_text_helpers import normalizer
-from src.data.preprocess_text_helpers import punctuation_cleaner
-from src.data.preprocess_text_helpers import tokenizer
+from src.data.preprocess_text_helpers import (
+    contractions_unpacker,
+    lowercase,
+    punctuation_cleaner,
+    tokenizer,
+)
 
 
 def test_can_unpack_contractions_sentence():
@@ -45,7 +46,3 @@ def test_punctuation_cleaner_removes_colon():
 
 def test_lowercase():
     assert lowercase("LIKEWISE 14:40 @Reni__Rinse") == "likewise 14:40 @reni__rinse"
-
-
-def test_normalize():
-    assert normalizer(":LIKEWISE 14:40 @Reni__Rinse") == ":LIKEWISE <time> <user>"

@@ -65,9 +65,8 @@ def normalize(dataframe: pd.DataFrame) -> pd.DataFrame:
     pipeline.register_processor(punctuation_cleaner)
     pipeline.register_processor(remove_stopwords)
     pipeline.register_processor(lowercase)
-    pipeline.register_processor(normalizer)
 
-    dataframe["normalized"] = dataframe["text"].apply(pipeline.process_text)
+    dataframe["normalized"] = normalizer(dataframe["text"].apply(pipeline.process_text))
     return dataframe
 
 
