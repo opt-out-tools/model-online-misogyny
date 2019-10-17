@@ -198,7 +198,7 @@ def lowercase(tweet: str) -> str:
     return " ".join(word.lower() for word in tweet.split())
 
 
-def normalizer(tweet: str) -> str:
+def normalizer(tweets):
     """ Return a the values parsed as normalized versions of themselves.
 
     Args:
@@ -221,7 +221,7 @@ def normalizer(tweet: str) -> str:
             "hashtag",
         ]
     )
-    return preprocesser.pre_process_doc(tweet)
+    return tweets.apply(preprocesser.pre_process_doc)
 
 
 def remove_stopwords(tweet: str) -> str:
