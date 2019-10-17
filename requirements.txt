@@ -2,14 +2,16 @@
 -e .
 
 # external requirements
+awscli
 boto3==1.9.250
 click
-Sphinx
 coverage
-awscli
-python-dotenv>=0.5.1
-pre-commit==1.18.3
 black==19.3b0
 flake8==3.7.8
+mypy == 0.701.0
+pre-commit==1.18.3
 pylint==2.4.2
 pytest==5.2.1
+python-dotenv>=0.5.1
+Sphinx
+
