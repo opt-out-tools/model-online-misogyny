@@ -1,5 +1,7 @@
-from typing import Dict
+import re
+from typing import Dict, List, Tuple
 
+import collections
 import pandas as pd
 
 
@@ -67,7 +69,7 @@ def density_of_curse_words_in_sentence(tweet: str) -> Dict[str, float]:
     return counts
 
 
-def density_of_curse_words_in_corpus(dataframe: pd.DataFrame) -> Dict:
+def density_of_curse_words_in_corpus(dataframe: pd.DataFrame) -> Dict[str, float]:
     """Returns density of curse words across an entire corpus
 
       Args:
@@ -82,3 +84,30 @@ def density_of_curse_words_in_corpus(dataframe: pd.DataFrame) -> Dict:
     )
     count = pd.DataFrame(list(dataframe["curse_words"])).T.sum(axis=1) / len(dataframe)
     return dict(count)
+
+
+def create_ngrams(tweet: str, ngram_number: int) -> List[str]:
+    """Returns the ngrams in a sentence.
+
+    Args:
+        tweet (str) : the tweet to be grammed.
+        ngram_number (int) : the number of grams, 2 = bigram, 3 = trigram.
+
+    Returns
+        bigrams (list) : a list of bigrams
+
+    """
+    tweet = tweet.lower()
+    tweet = re.sub(r"[^a-zA-Z0-9\s]", " ", tweet)
+
+    # Break sentence in the token, remove empty tokens
+    tokens = [token for token in tweet.split(" ") if token != ""]
+
+    # Use the zip function to help us generate n-grams
+    # Concatentate the tokens into ngrams and return
+    ngrams = zip(*[tokens[i:] for i in range(ngram_number)])
+    return [" ".join(ngram) for ngram in ngrams]
+
+
+def count_top_10_most_common_ngrams(ngrams: List[str]) -> List[Tuple[str, int]]:
+    return collections.Counter(ngrams).most_common(10)
