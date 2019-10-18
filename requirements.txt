@@ -15,6 +15,8 @@ pre-commit==1.18.3
 pylint==2.4.2
 pytest==5.2.1
 python-dotenv>=0.5.1
+scikit-learn==0.21.3
 spacy==2.1.4
 Sphinx
+wordcloud==1.5.0
 
