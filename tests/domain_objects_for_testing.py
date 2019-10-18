@@ -1,7 +1,9 @@
+from typing import Dict
+
 import pandas as pd
 
 
-def preprocess_normalize():
+def preprocess_normalize() -> pd.DataFrame:
     tweets = [
         "rt <user> feminists take note <hashtag> <hashtag> <url>",
         "rt <user> antis stop treating blocks trophies soon feminists stop "
@@ -15,7 +17,7 @@ def preprocess_normalize():
     return pd.DataFrame({"normalized": tweets})
 
 
-def preprocess_tokenize():
+def preprocess_tokenize() -> pd.DataFrame:
     tweets = [
         "rt @asredasmyhair : feminists , take note . #femfreefriday "
         "#womenagainstfeminism http://t.co/j2hqzvj8cx",
@@ -30,7 +32,7 @@ def preprocess_tokenize():
     return pd.DataFrame({"tokenized": tweets})
 
 
-def preprocess_clean():
+def preprocess_clean() -> pd.DataFrame:
     tweets = [
         "rt @asredasmyhair feminists take note #femfreefriday "
         "#womenagainstfeminism http://t.co/j2hqzvj8cx",
@@ -43,7 +45,7 @@ def preprocess_clean():
     return pd.DataFrame({"cleaned": tweets})
 
 
-def create_pipeline_data(pipeline_name: str) -> pd.DataFrame:
+def create_pipeline_data(pipeline_name: str) -> Dict:
     """ Returns data processed according to the pipeline chosen.
 
     Args:
@@ -58,3 +60,23 @@ def create_pipeline_data(pipeline_name: str) -> pd.DataFrame:
         "clean": preprocess_clean(),
     }
     return pipeline[pipeline_name]
+
+
+def create_dataframe_of_labeled_tweets() -> pd.DataFrame:
+    tweets = [
+        "RT @asredasmyhair: Feminists, take note. #FemFreeFriday "
+        "#WomenAgainstFeminism http://t.co/J2HqzVJ8Cx",
+        "RT @AllstateJackie: Antis will stop treating blocks as trophies as "
+        "soon as feminists stop treating blocks as arguments. đŸ¸â˜• "
+        "#GamerGate",
+        "@MGTOWKnight @FactsVsOpinion ...cue the NAFALT in 3..2...1...",
+        "RT @baum_erik: Lol I'm not surprised these 2 accounts blocked me "
+        "@femfreq #FemiNazi #Gamergate &amp; @MomsAgainstWWE #ParanoidParent "
+        "http://t.câ€¦",
+    ]
+    return pd.DataFrame(
+        {
+            "text": tweets,
+            "label": pd.Series([1 if number % 2 == 0 else 0 for number in range(0, 4)]),
+        }
+    )
