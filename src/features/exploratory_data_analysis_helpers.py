@@ -1,7 +1,9 @@
+from typing import Dict
+
 import pandas as pd
 
 
-def density_of_curse_words_in_sentence(tweet):
+def density_of_curse_words_in_sentence(tweet: str) -> Dict[str, float]:
     """Returns the density of top 20 curse words, taken from Wang, Wenbo,  et  al.
     Cursing  in english on  twitter."
     The method needs the punctuation to be removed.
@@ -47,7 +49,7 @@ def density_of_curse_words_in_sentence(tweet):
         for value in values:
             lookup[value] = key
     # here we add counter
-    counts = {curse: 0 for curse in curse_words}
+    counts = {curse: 0.0 for curse in curse_words}
 
     #####
     tweet_words = tweet.lower().split(" ")
@@ -61,22 +63,22 @@ def density_of_curse_words_in_sentence(tweet):
 
     # all done, now we just need frequency
     for key in counts:
-        counts[key] /= len(tweet_words)
+        counts[key] /= float(len(tweet_words))
     return counts
 
 
-def density_of_curse_words_in_total_corpus(dataframe, dataset_title):
+def density_of_curse_words_in_corpus(dataframe: pd.DataFrame) -> Dict:
     """Returns density of curse words across an entire corpus
 
       Args:
         dataframe (pandas df) : the df with the tweets to be counted.
 
     Returns:
-        df (pandas df) : the curse words and their densities.
+        count (dict) : the curse words and their densities.
 
     """
     dataframe["curse_words"] = dataframe["text"].apply(
         density_of_curse_words_in_sentence
     )
     count = pd.DataFrame(list(dataframe["curse_words"])).T.sum(axis=1) / len(dataframe)
-    return pd.DataFrame({dataset_title: count}, index=count.index)
+    return dict(count)
