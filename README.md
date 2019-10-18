@@ -56,8 +56,54 @@ Project Organization
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
+Project Datasets
+--------------------
+The text must be under the column head **text** and the labels under the column head **label**. 
+Misogynistic or harassing is always 1 and not 0. Only dataset with open access is stanford. Please ask about others.
+```
+hatespeech - obtained from Zeerak Waseem. 
+aws_annotated - our annotations + hatespeech
+stanford_hatespeech - stanford (aws_annotated+snorkel labels) + hatespeech
+gold - stanford_hatespeech + AMI
+metoo - tweet ids from https://github.com/datacamp/datacamp-metoo-analysis
+rapeglish - scraped from random rape threat generator by Emma Jane
+dataturks - obtained from dataturks crowdsource labeling
+```
+
+Installation
+--------------------
+
+### Conda
+
+Create a new Conda environment
+```
+conda create -n find-out python=3.7
+``` 
+and activate it with
+```bash
+conda activate find-out
+```
+Move to the project root directory (e.g. `$ cd find-out/`)
+and run the following command:
+```bash
+pip install -r requirements.txt
+```
+
+### Spacy Model
+
+```bash
+python -m spacy download en_core_web_md
+```
+
 ### Pre-commit Hooks
 
 ```bash
 pre-commit install
+```
+
+## Tests
+
+Tests should be run from the root directory as
+```bash
+python -m pytest
 ```
