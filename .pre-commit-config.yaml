@@ -22,3 +22,8 @@ repos:
         entry: mypy
         language: system
         types: [python]
+      - id: tests
+        name: pytest
+        entry: python -m pytest
+        language: system
+        types: [python]
