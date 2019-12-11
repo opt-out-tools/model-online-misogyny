@@ -1,0 +1,4 @@
+['remote "git_remote"']
+url = https://github.com/opt-out-tools/study-online-misogyny.git
+[core]
+remote = git_remote
