@@ -4,9 +4,10 @@
 # external requirements
 awscli
 boto3==1.9.250
+black==19.3b0
 click
 coverage
-black==19.3b0
+dvc==0.75.1
 ekphrasis==0.5.1
 flake8==3.7.8
 Keras==2.2.4
