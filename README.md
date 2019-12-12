@@ -107,3 +107,32 @@ Tests should be run from the root directory as
 ```bash
 python -m pytest
 ```
+
+## ML versioning
+We are using [dvc](https://dvc.org/) for this. 
+
+Initially we're just using DVC to provide a basic useful framework to track, save and share models and large data files.
+ 
+Eventually to achieve full reproducibility, we'll have to connect code and configuration with the data it processes to produce the result. This will come later.
+
+
+To get the model:
+1) Check dvc is install
+```
+ dvc --version   
+```
+2) Add the s3 bucket as a remote
+```
+dvc remote add -d myremote s3://opt-out-tools-models/models
+dvc remote modify mynewremote region eu-central-1
+```
+3) Pull the model
+```
+dvc pull
+```
+To add a new version of the model:
+```
+dvc add <model_filename>
+dvc push
+```
+
