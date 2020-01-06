@@ -1,0 +1,5 @@
+['remote "myremote"']
+url = s3://opt-out-tools-models/models
+region = eu-central-1
+[core]
+remote = myremote
