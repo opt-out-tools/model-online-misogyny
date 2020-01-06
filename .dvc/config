@@ -1,4 +1,5 @@
-['remote "git_remote"']
-url = https://github.com/opt-out-tools/study-online-misogyny.git
+['remote "myremote"']
+url = s3://opt-out-tools-models/models
+region = eu-central-1
 [core]
-remote = git_remote
+remote = myremote
