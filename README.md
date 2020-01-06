@@ -117,22 +117,45 @@ Eventually to achieve full reproducibility, we'll have to connect code and confi
 
 
 To get the model:
-1) Check dvc is install
+1) Check `dvc` is installed
 ```
  dvc --version   
 ```
-2) Add the s3 bucket as a remote
+2) Add the s3 bucket as a remote if not already there
 ```
 dvc remote add -d myremote s3://opt-out-tools-models/models
 dvc remote modify mynewremote region eu-central-1
 ```
-3) Pull the model
+3) Pull the cache  of the models from the s3 bucket
 ```
 dvc pull
 ```
-To add a new version of the model:
+4) Checkout the `.dvc` of the model
+```
+dvc checkout <model_filename>.dvc
+```
+
+To add a new version of the model. 
+
 ```
 dvc add <model_filename>
+```
+This command should be used instead of git add on the model file. The above
+command tells Git to ignore the directory and puts it into the cache (while 
+keeping a file link to it in the workspace, so you can continue working the 
+same way as before). This is achieved by creating a simple human-readable
+`.dvc` that serves as a pointer to the cache.
+
+We need to let git know about the `.dvc` file.
+```
+git add <model_filename>.dvc
+git commit <model_filename>.dvc .dvc/config
+git push
+```
+Finally we need to sync the model with the cloud storage. To do this, all we
+need to run is the command below.
+```
 dvc push
 ```
+Simples!
 
