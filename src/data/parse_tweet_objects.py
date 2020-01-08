@@ -50,7 +50,7 @@ class ParseTweets:
     """
 
     def __init__(self):
-        pass
+        self.tweet_validator = TweetValidator()
 
     def tweets_to_dataframe(self, tweets_input, root_attrs=(), user_attrs=(),
                             remove_dupes=True, dupe_attrs=('id',), **new_cols):
@@ -120,7 +120,7 @@ class ParseTweets:
         for tweet_json in tweets_input:
             try:
                 tweet = json.loads(tweet_json)
-                self.validate_tweet(tweet)
+                self.tweet_validator.validate(tweet)
 
             except json.JSONDecodeError:
                 warn_str = 'Caught Exception JSONDecodeError for the ' \
@@ -229,41 +229,6 @@ class ParseTweets:
 
         print('Writing CSV with %d Tweets to %s' % (len(tweets_df), csv_loc))
         tweets_df.to_csv(csv_loc, index=False)
-
-    def validate_tweet(self, tweet, reqd_attrs=('id', 'text', 'user')):
-        """
-        Method for checking whether a given decoded Tweet JSON object
-        corresponds to a valid Tweet.
-
-        We define a valid Tweet as one which contains some minimum set
-        of fundamental attributes (and which are not null - but this
-        could be changed).
-
-        Parameters
-        ----------
-        tweet: dict
-            Decoded Tweet JSON object.
-        reqd_attrs: tuple of str
-            The attributes which must be present for a Tweet to be
-            considered valid.
-
-        Raises
-        ------
-        InvalidTweet
-            If the Tweet is not valid.
-
-        Returns
-        -------
-        None
-        """
-
-        missing_attrs = []
-        for attr in reqd_attrs:
-            if attr not in tweet or not tweet[attr]:
-                missing_attrs.append(attr)
-
-        if missing_attrs:
-            raise InvalidTweet(missing_attrs)
 
 
 class ParseTweetsFromJSONL(ParseTweets):
@@ -408,6 +373,59 @@ class ParseTweetsFromJSONL(ParseTweets):
                                       **new_cols)
 
 
+class TweetValidator:
+    """
+    Class providing methods for validating Tweet objects.
+
+    For now, we define a valid Tweet as one which possesses some minimum
+    set of fundamental attributes.
+
+    Attributes
+    ----------
+    reqd_attrs: tuple of str
+        The attributes which a Tweet must possess for it to be
+        considered a valid Tweet.
+
+    Methods
+    -------
+    validate(tweet)
+        Returns None if the Tweet is a valid Tweet object
+        (perhaps it would be better to return True?). Raises
+        InvalidTweet exception if tweet is not a valid Tweet object.
+    """
+
+    def __init__(self, reqd_attrs=('id', 'text', 'user')):
+        self.reqd_attrs = reqd_attrs
+
+    def validate(self, tweet):
+        """
+        Method for checking whether a given decoded Tweet JSON object
+        corresponds to a valid Tweet.
+
+        Parameters
+        ----------
+        tweet: dict
+            Decoded Tweet JSON object.
+
+        Raises
+        ------
+        InvalidTweet
+            If the Tweet is not valid.
+
+        Returns
+        -------
+        None if the Tweet is valid.
+        """
+
+        missing_attrs = []
+        for attr in self.reqd_attrs:
+            if attr not in tweet or not tweet[attr]:
+                missing_attrs.append(attr)
+
+        if missing_attrs:
+            raise InvalidTweet(missing_attrs)
+
+
 class InvalidTweet(Exception):
     pass
 
@@ -415,7 +433,7 @@ class InvalidTweet(Exception):
 if __name__ == '__main__':
     parser = ParseTweetsFromJSONL()
 
-    jsonl_loc = '../../tests/parse_tweet_objects_test_data_with_errors.jsonl'
+    jsonl_loc = '../../tests/parse_tweet_objects_test_data.jsonl'
     csv_loc = '../../tests/parse_tweet_objects_test_result.csv'
     parser.jsonl_to_csv(jsonl_loc,
                         csv_loc,
