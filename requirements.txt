@@ -21,4 +21,3 @@ Sphinx
 tensorboard==1.14.0
 tensorboardX==1.9
 wordcloud==1.5.0
-
