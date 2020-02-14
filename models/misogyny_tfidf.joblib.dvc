@@ -1,0 +1,7 @@
+md5: 609c266692ceaee722e5dc887a86f17a
+outs:
+- md5: 19f6e93d0eb4d8b6fc997ba08ac16505
+  path: misogyny_tfidf.joblib
+  cache: true
+  metric: false
+  persist: false

@@ -16,7 +16,7 @@ assignees: ''
 **Skills**
 
 
-**Tools**
+**Dependencies**
 
 
 **Time Estimation**
