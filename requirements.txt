@@ -2,12 +2,8 @@
 -e .
 
 # external requirements
-awscli
-boto3==1.9.250
 black==19.3b0
-click
-coverage
-dvc==0.75.1
+dvc[s3]==0.84.0
 ekphrasis==0.5.1
 flake8==3.7.8
 Keras==2.2.4
@@ -17,6 +13,7 @@ pandas==0.24.2
 pre-commit==1.18.3
 pylint==2.4.2
 pytest==5.2.1
+coverage==4.5.4
 python-dotenv>=0.5.1
 scikit-learn==0.21.3
 spacy==2.1.4
@@ -24,4 +21,3 @@ Sphinx
 tensorboard==1.14.0
 tensorboardX==1.9
 wordcloud==1.5.0
-

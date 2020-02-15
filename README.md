@@ -1,7 +1,7 @@
 Opt Out
 ==============================
 
-Our study ito online misogyny and how to model it
+Our study into online misogyny and how to model it
 
 Project Organization
 ------------
@@ -77,13 +77,13 @@ Installation
 
 Create a new Conda environment
 ```
-conda create -n find-out python=3.7
+conda create -n som python=3.7
 ``` 
 and activate it with
 ```bash
-conda activate find-out
+conda activate som
 ```
-Move to the project root directory (e.g. `$ cd find-out/`)
+Move to the project root directory (e.g. `$ cd study-online-misoginy/`)
 and run the following command:
 ```bash
 pip install -r requirements.txt
