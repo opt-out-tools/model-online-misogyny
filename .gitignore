@@ -109,6 +109,3 @@ venv.bak/
 # Data Science
 .DS_Store
 data/
-models/
-
-# DVC
