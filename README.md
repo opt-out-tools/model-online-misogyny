@@ -3,6 +3,14 @@
 <p></p> <h1 align="center"> Opt Out Tools </h1>
 <p></p> <h2 align="center"> Open Source Modeling - Research & Production Code </h2>
 
+Quick links:
+
+- [Repository Structure](#Repository-Structure)
+- [Purpose of the Repository](#Purpose-of-the-Repository)
+- [How the Repository Works?](#How-the-Repsitory-Works?)
+- [Use the Repository](#Use-the-Repository)
+- [Code of Conduct](#Code-of-Conduct)
+
 
 Repository Structure
 ------------
@@ -48,13 +56,15 @@ Repository Structure
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
-How the Repository Works?
+Purpose of the Repository
 --------------------
 There are three purposes of this repo
 - Open source research into online misogyny
 - Using this research to build a production model for the browser extension
 - (Long-term) develop a toolkit for identifying misogyny
 
+How the Repository Works?
+--------------------
 ### Research
 The research will be carried out in notebooks. This will be used to
 communicate results initially. Naming convention is a number (for ordering), 
@@ -80,11 +90,15 @@ acceptance criteria scripts.
 To understand the finer details of how this works, please see the [CONTRIBUTING
 .md]()
 
-Project Datasets
+
+Use the Repository
 --------------------
+
+## Datasets
 The text must be under the column head **text** and the labels under the column 
 head **label**. Misogynistic or harassing is always 1 and not 0. Only dataset 
 with open access is stanford. Please ask about others.
+
 ```
 hatespeech - obtained from Zeerak Waseem. 
 aws_annotated - our annotations + hatespeech
@@ -95,8 +109,7 @@ rapeglish - scraped from random rape threat generator by Emma Jane
 dataturks - obtained from dataturks crowdsource labeling
 ```
 
-Installation
---------------------
+## Installation
 
 ### Conda
 
@@ -186,3 +199,8 @@ dvc push
 ```
 Simples!
 
+## Code of Conduct
+
+> Please note that this project is released with a [Contributor Code of 
+Conduct](https://github.com/malteserteresa/opt-out/blob/master/CODE_OF_CONDUCT.
+md). By participating in this project you agree to abide by its terms.
