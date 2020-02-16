@@ -41,7 +41,6 @@ Repository Structure
     |
     ├── opt_out_logo.png   <-  Our logo
     ├── mypy.ini           <-  Used for static typing
-    ├── test_environment.py  <- Tests your environment is set up correctly
     └── LICENSE            
 
 
