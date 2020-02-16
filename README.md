@@ -1,32 +1,23 @@
-Opt Out
-==============================
+<p align="center"> <img width="250" height="250" src="opt_out_logo.png"> </p>
 
-Our study into online misogyny and how to model it
+<p></p> <h1 align="center"> Opt Out Tools </h1>
+<p></p> <h2 align="center"> Open Source Modeling </h2>
+<p></p> <h3 align="center"> Research & Production Code</h3>
 
-Project Organization
+
+Repository Structure
 ------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    ├── CONTRIBUTING.md    <- How to contribute to this repository
+    ├── README.md          <- The top-level desciption for people interested
+    ├── data               <- Our dataset. Access credentials required
+    │    
+    ├── models             <- Trained and serialized models fit for production
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
+    ├── notebooks          <- Jupyter notebooks. 
+    │    
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
+    │                      <- Eventually will contain dashboard
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
@@ -48,18 +39,54 @@ Project Organization
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+    |
+    ├── opt_out_logo.png   <-  Our logo
+    ├── mypy.ini           <-  Used for static typing
+    ├── test_environment.py  <- Tests your environment is set up correctly
+    └── LICENSE            
 
 
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
+How the Repository Works?
+--------------------
+There are three purposes of this repo
+- Open source research into online misogyny
+- Using this research to build a production model for the browser extension
+- (Long-term) develop a toolkit for identifying misogyny
+
+### Research
+The research will be carried out in notebooks. This will be used to
+communicate results initially. Naming convention is a number (for ordering), 
+the creator's initials, and a short `-` delimited description, e.g.
+`1.0-jqp-initial-data-exploration`. Folders within the notebooks directory
+ are named based on the type of model being studied.
+ 
+For further information about contributing research and the PR process, please 
+see [CONTRIBUTING.md]().
+
+### Production 
+Once our research has culminated in a model that we believe is production
+ready, it then needs to be implemented with a common API so we can deploy
+it easily. This currently is only a .predict() function, but is subject to
+change in the coming month.
+ 
+### Toolkit 
+The long-term vision for this repo is to develop a toolkit for identifying
+/studying online misogyny with the code written in src/ folder. Currently
+this folder contains preprocess pipelines, error analysis scripts and
+acceptance criteria scripts.
+
+To understand the finer details of how this works, please see the [CONTRIBUTING
+.md]()
+
 Project Datasets
 --------------------
-The text must be under the column head **text** and the labels under the column head **label**. 
-Misogynistic or harassing is always 1 and not 0. Only dataset with open access is stanford. Please ask about others.
+The text must be under the column head **text** and the labels under the column 
+head **label**. Misogynistic or harassing is always 1 and not 0. Only dataset 
+with open access is stanford. Please ask about others.
 ```
 hatespeech - obtained from Zeerak Waseem. 
 aws_annotated - our annotations + hatespeech
@@ -111,9 +138,11 @@ python -m pytest
 ## ML versioning
 We are using [dvc](https://dvc.org/) for this. 
 
-Initially we're just using DVC to provide a basic useful framework to track, save and share models and large data files.
+Initially we're just using DVC to provide a basic useful framework to track, 
+save and share models and large data files.
  
-Eventually to achieve full reproducibility, we'll have to connect code and configuration with the data it processes to produce the result. This will come later.
+Eventually to achieve full reproducibility, we'll have to connect code and 
+configuration with the data it processes to produce the result. 
 
 
 To get the model:
