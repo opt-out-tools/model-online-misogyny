@@ -1,8 +1,7 @@
 <p align="center"> <img width="250" height="250" src="opt_out_logo.png"> </p>
 
 <p></p> <h1 align="center"> Opt Out Tools </h1>
-<p></p> <h2 align="center"> Open Source Modeling </h2>
-<p></p> <h3 align="center"> Research & Production Code</h3>
+<p></p> <h2 align="center"> Open Source Modeling - Research & Production Code </h2>
 
 
 Repository Structure
