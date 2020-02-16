@@ -111,7 +111,7 @@ dataturks - obtained from dataturks crowdsource labeling
 
 ## Installation
 
-### Conda
+#### Conda
 
 Create a new Conda environment
 ```
@@ -127,13 +127,13 @@ and run the following command:
 pip install -r requirements.txt
 ```
 
-### Spacy Model
+#### Spacy Model
 
 ```bash
 python -m spacy download en_core_web_md
 ```
 
-### Pre-commit Hooks
+#### Pre-commit Hooks
 
 ```bash
 pre-commit install
