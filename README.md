@@ -73,7 +73,7 @@ the creator's initials, and a short `-` delimited description, e.g.
  are named based on the type of model being studied.
  
 For further information about contributing research and the PR process, please 
-see [CONTRIBUTING.md]().
+see [CONTRIBUTING.md](https://github.com/opt-out-tools/study-online-misogyny/blob/documentation/CONTRIBUTING.md).
 
 ### Production 
 Once our research has culminated in a model that we believe is production
@@ -88,7 +88,7 @@ this folder contains preprocess pipelines, error analysis scripts and
 acceptance criteria scripts.
 
 To understand the finer details of how this works, please see the [CONTRIBUTING
-.md]()
+.md](https://github.com/opt-out-tools/study-online-misogyny/blob/documentation/CONTRIBUTING.md)
 
 
 Use the Repository
@@ -146,7 +146,7 @@ Tests should be run from the root directory as
 python -m pytest
 ```
 
-## ML versioning
+## Get the latest Model/Dataset
 We are using [dvc](https://dvc.org/) for this. 
 
 Initially we're just using DVC to provide a basic useful framework to track, 
@@ -174,6 +174,7 @@ dvc pull
 ```
 dvc checkout <model_filename>.dvc
 ```
+## Add a new Model/Dataset
 
 To add a new version of the model. 
 
@@ -198,6 +199,10 @@ need to run is the command below.
 dvc push
 ```
 Simples!
+
+## Rerun Model building
+Coming soon
+
 
 ## Code of Conduct
 

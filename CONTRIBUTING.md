@@ -160,13 +160,27 @@ Once these steps are complete please see the individual README.md for specific
 installation details.
 
 ### Pull Request Checklist
-COMING SOON!!
 
 #### Research
+Please make sure that the naming convention fits current standards and that
+the notebook is in the correct folder. Also please make sure your notebook
+is explained clearly, because if it takes a while to understand, there's a
+lower chance the PR will be accepted.
+
+If you have written a function that you think 'wow that is so great/useful
+I think others should have access to it' then this brilliant piece of code 
+belongs in the src/ folder! Please see the toolkit heading for contributing
+this code.
 
 #### Production
+Eventually there will be a validation suite to check the input, interface
+and benchmarking of the production model. There will also be the facility to
+ use Sphinx documentation to explain the model.
+ 
+Please make sure you have used DVC correctly to rerun building the model. 
 
 #### Tool-kit
+Coming soon
 
 #### General
 
