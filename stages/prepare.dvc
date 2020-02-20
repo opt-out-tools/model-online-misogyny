@@ -1,5 +1,5 @@
-md5: bf1b66f5b4542982015162a4a85d038f
-cmd: python src/prepare.py data/gold_data_en.csv data/prepared_data.csv
+md5: 72ab256caf792ea5b18ad6b1619ddc35
+cmd: python src/prepare.py data/gold_data_en.csv data/prepared-data.csv
 wdir: ..
 deps:
 - md5: d0a9211af7d3af9880993414766e18d0
@@ -8,7 +8,7 @@ deps:
   path: src/prepare.py
 outs:
 - md5: d0a9211af7d3af9880993414766e18d0
-  path: data/prepared_data.csv
+  path: data/prepared-data.csv
   cache: true
   metric: false
   persist: false
