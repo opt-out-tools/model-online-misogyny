@@ -1,7 +1,0 @@
-md5: 0f4a3aaa1c81c1b103aaca8ec726a88f
-outs:
-- md5: 1eba4bf863763409ba9a8cad1e1ed2dd
-  path: misogyny_logreg.joblib
-  cache: true
-  metric: false
-  persist: false
