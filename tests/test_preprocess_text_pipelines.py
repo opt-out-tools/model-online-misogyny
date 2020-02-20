@@ -1,4 +1,4 @@
-from src.data.preprocess_text_pipelines import normalize, clean, tokenize
+from src.text.pipelines import clean, normalize, tokenize
 
 
 def test_normalize(labeled_tweets):

@@ -1,10 +1,8 @@
-from src.features.exploratory_data_analysis_helpers import (
-    count_top_10_most_common_ngrams,
-)
-from src.features.exploratory_data_analysis_helpers import create_ngrams
-from src.features.exploratory_data_analysis_helpers import (
-    density_of_curse_words_in_corpus,
+from src.text.utils import (
     density_of_curse_words_in_sentence,
+    density_of_curse_words_in_corpus,
+    create_ngrams,
+    count_top_10_most_common_ngrams,
 )
 
 
