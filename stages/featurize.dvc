@@ -1,0 +1,14 @@
+md5: 9316d7c8f2cee18dd5e58c04da2df6e4
+cmd: python src/featurize.py data/prepared-data-train.csv data/matrix-train.joblib
+wdir: ..
+deps:
+- md5: 938fa2ab1a25176f8121300cd65317ba
+  path: src/featurize.py
+- md5: d9319ef5077ddc3d3b9ddcbbd60138a4
+  path: data/prepared-data-train.csv
+outs:
+- md5: 8e835eb5a8999a20c63469a514128385
+  path: data/matrix-train.joblib
+  cache: true
+  metric: false
+  persist: false
