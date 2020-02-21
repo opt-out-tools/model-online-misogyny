@@ -8,7 +8,7 @@ import spacy
 def main():
     """Take text from input dataframe and vectorize it to build a feature matrix"""
     try:
-        input_file, output_file = sys.argv[1], sys.argv[3]
+        input_file, output_file = sys.argv[1], sys.argv[2]
     except (IndexError, ValueError) as error:
         print(error)
         print("Error: please specify input and output files.")
@@ -22,6 +22,9 @@ def main():
     print("Creating embeddings...")
     docs = list(nlp.pipe(df_in["text"]))
     feature_matrix = np.array(list(map(lambda x: x.vector, docs)))
+    # Add labels column
+    labels = df_in["label"].to_numpy().reshape((-1, 1))
+    feature_matrix = np.hstack((feature_matrix, labels))
     print(f"The feature matrix has dimensions {feature_matrix.shape}.")
     with open(output_file, "wb") as handler:
         joblib.dump(feature_matrix, handler, compress="zlib")
