@@ -10,6 +10,9 @@ from sklearn.metrics import f1_score, roc_curve, auc
 import spacy
 
 
+np.random.seed(42)
+
+
 def plot_roc_auc_f1(y_test, y_proba, title=None):
     """Plot ROC curve and random comparison, along with f1 and AUC metrics"""
     std_f1 = f1_score(y_test, y_proba[:, 1] > 0.5)
@@ -48,7 +51,7 @@ def write_results(output_folder, y_test, y_prob):
     with open(roc_img_file_png, "wb") as handler:
         plt.savefig(handler, dpi=150, format="png")
     with open(roc_img_file_pdf, "wb") as handler:
-        plt.savefig(handler, dpi=150, format="pdf")
+        plt.savefig(handler, dpi=150, format="pdf", metadata={"creationDate": None})
 
     metrics = dict(f1=f1_test, AUC=auc_test)
     with open(metrics_file, "w") as file:
