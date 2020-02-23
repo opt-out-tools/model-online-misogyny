@@ -17,7 +17,9 @@ def main():
     labels = feature_matrix[:, -1]
     feature_matrix = feature_matrix[:, :-1]
     print(f"The feature matrix has dimensions {feature_matrix.shape}.")
-    classifier = RandomForestClassifier(n_estimators=400, n_jobs=-1, verbose=2)
+    classifier = RandomForestClassifier(
+        n_estimators=400, random_state=42, n_jobs=-1, verbose=2
+    )
     x_train = feature_matrix
     print("Training model...")
     classifier.fit(x_train, labels)

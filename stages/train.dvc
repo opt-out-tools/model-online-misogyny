@@ -1,13 +1,13 @@
-md5: e72ec82bab6c59a0ca94c32ffe918c58
+md5: 5e296518161652d16f17596bac097d14
 cmd: python src/train.py data/matrix-train.joblib models/misog-model.joblib
 wdir: ..
 deps:
-- md5: ffe9b1837cd525e2ab9ca81c108f7f5a
+- md5: c39b96e6f8f8bbbdd6f8d4080a416a3b
   path: src/train.py
 - md5: 55356a3c1a10ec1708fe99290db33fc0
   path: data/matrix-train.joblib
 outs:
-- md5: 98a382b64360b20a07c5fe73aba63806
+- md5: 758336a6be2a6b02374a85f037c967af
   path: models/misog-model.joblib
   cache: true
   metric: false
