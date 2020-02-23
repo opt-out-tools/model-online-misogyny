@@ -1,4 +1,4 @@
-md5: 2a95cce33f4362b5c6016ba324080883
+md5: 04610e362285f9e35feea7e22503ecda
 cmd: python src/evaluate.py data/prepared-data-test.csv models/misog-model.joblib
   reports
 wdir: ..
@@ -15,7 +15,7 @@ outs:
   cache: true
   metric: false
   persist: false
-- md5: 0625f5ef9cc24f9960e3d46de43ace84
+- md5: bf4eedee43d4a4b9229ba37b5940220e
   path: reports/roc_auc_f1.pdf
   cache: true
   metric: false

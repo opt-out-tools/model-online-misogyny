@@ -1,8 +1,8 @@
-md5: 5e296518161652d16f17596bac097d14
+md5: 4be3000b2de87b6a394a963caabbf39f
 cmd: python src/train.py data/matrix-train.joblib models/misog-model.joblib
 wdir: ..
 deps:
-- md5: c39b96e6f8f8bbbdd6f8d4080a416a3b
+- md5: f5db41e1765911fd07cda48f7492f148
   path: src/train.py
 - md5: 55356a3c1a10ec1708fe99290db33fc0
   path: data/matrix-train.joblib
