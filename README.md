@@ -11,7 +11,8 @@ Quick links:
 - [Repository Structure](#Repository-Structure)
 - [Purpose of the Repository](#Purpose-of-the-Repository)
 - [How the Repository Works](#How-the-Repository-Works)
-- [Use the Repository](#Use-the-Repository)
+- [Dependencies](#Dependencies)
+- [Run the ML Pipeline](#Run-the-ML-Pipeline)
 - [Code of Conduct](#Code-of-Conduct)
 
 ## Repository Structure
@@ -80,16 +81,22 @@ acceptance criteria scripts.
 To understand the finer details of how this works, please see
 [CONTRIBUTING.md](https://github.com/opt-out-tools/study-online-misogyny/blob/documentation/CONTRIBUTING.md)
 
-### Use the Repository
+## Dependencies
 
-## Data
+### Data
 
-Please reach out to OOT ask about our golden dataset to [...].
-The filename
+Please reach out to OOT ask about our golden dataset.
+The dataset destination path is
+`data/gold_data_en.csv`.
+This has to be exact for the ML pipeline to wor correctly.
 
-### Installation
+### Software
 
-#### Conda
+**NOTE: All commands in this section are required to
+run successfully in order for you to contribute
+to this repository.**
+
+#### Python
 
 Create a new Conda environment
 
@@ -103,103 +110,102 @@ and activate it with
 conda activate som
 ```
 
+(you can alternatively create an environment with `virtualenv`
+but your mileage may vary).
+
 Move to the project root directory (e.g. `$ cd study-online-misoginy/`)
-and run the following command:
+and install package dependencies as follows:
 ```bash
 pip install -r requirements.txt
 ```
 
 #### Spacy Model
 
+There is a separate command for downloading the Spacy language model
+needed for our ML pipeline:
 ```bash
 python -m spacy download en_core_web_md
 ```
 
 #### Pre-commit Hooks
 
+Pre-commit will make sure that the code we commit is
+kosher or close enough:
 ```bash
 pre-commit install
 ```
 
-## Tests
+### Tests
 
 Tests should be run from the root directory as
+
 ```bash
 python -m pytest
 ```
 
-## Get the latest Model/Dataset
+## Run the ML pipeline
 
-We are using [dvc](https://dvc.org/) for this.
+We are using [DVC](https://dvc.org/) to track and manage our
+machine-learning workflow.
 
-Initially we're just using DVC to provide a basic useful
-framework to track, save and share models and large data files.
-
-Eventually to achieve full reproducibility, we'll have to
-connect code and configuration with the data it
-processes to produce the result.
-
-To get the model:
-
-1. Check DVC is installed
+Once the repository is set up, one should be able to run:
 
 ```
-dvc --version
+dvc repro
 ```
 
-1. Add the s3 bucket as a remote if not already there
+This will run the full pipeline, from preprocessing to evaluation of the
+model on the test data.
+This will also update the pipeline every time there is a new change to
+the code that affects it.
+
+To check if the pipeline is up to date run
 
 ```
-dvc remote add -d myremote s3://opt-out-tools-models/models
-dvc remote modify myremote region eu-central-1
+dvc status
 ```
 
-1. Pull the cache  of the models from the s3 bucket
+### Visualize the pipeline
+
+The pipeline can be visualized in ASCII art with the following command:
 
 ```
-dvc pull
+dvc pipeline show --ascii
 ```
 
-1. Checkout the `.dvc` of the model
+which will visualize the DVC files responsible for each stage and their
+mutual connection.
+The default (and final) stage is the evaluation stage, which is specified
+in `Dvcfile`.
+All other DVC files can be found in the `stages/` folder.
+
+### Visualize metrics
+
+Metrics are defined within the DVC pipeline and can be visualize
+(for the current branch) with the command:
 
 ```
-dvc checkout <model_filename>.dvc
+dvc metrics show
 ```
 
-## Add a new Model/Dataset
-
-To add a new version of the model.
-
-```
-dvc add <model_filename>
-```
-
-This command should be used instead of git add on the model file. The above
-command tells Git to ignore the directory and puts it into the cache (while
-keeping a file link to it in the workspace, so you can continue working the
-same way as before). This is achieved by creating a simple human-readable
-`.dvc` that serves as a pointer to the cache.
-
-We need to let git know about the `.dvc` file.
+One can get a quick comparison with all others experiment in the repo
+with a similar command:
 
 ```
-git add <model_filename>.dvc
-git commit <model_filename>.dvc .dvc/config
-git push
+dvc metrics show -a
 ```
 
-Finally we need to sync the model with the cloud storage. To do this, all we
-need to run is the command below.
+### Pipeline modifications
+
+A generic modification of the pipeline should focus on the Python source
+in `src/`, most notably `featurize.py` or `train.py`.
+
+To have a closer look at the pipeline setup investigate the DVC files in
+the `stages/` folder or run
 
 ```
-dvc push
+dvc pipeline show --ascii -c stages/train.py
 ```
-
-Simples!
-
-## Rerun Model building
-
-Coming soon
 
 ## Code of Conduct
 

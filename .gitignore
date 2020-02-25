@@ -109,3 +109,6 @@ venv.bak/
 # Data Science
 .DS_Store
 
+# VS Code
+.vscode/
+
