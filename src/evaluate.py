@@ -1,3 +1,4 @@
+import os
 import sys
 from time import time
 from pathlib import Path
@@ -41,6 +42,7 @@ def load_artifacts(test_set_file, trained_model_file):
 
 
 def write_results(output_folder, y_test, y_prob):
+    """Save to disk results of model evaluation"""
     roc_img_file_png = output_folder / "roc_auc_f1.png"
     roc_img_file_pdf = output_folder / "roc_auc_f1.pdf"
     metrics_file = output_folder / "eval.json"
@@ -51,6 +53,8 @@ def write_results(output_folder, y_test, y_prob):
     with open(roc_img_file_png, "wb") as handler:
         plt.savefig(handler, dpi=150, format="png")
     with open(roc_img_file_pdf, "wb") as handler:
+        # Creation date must be off for reproducibility
+        os.environ["SOURCE_DATE_EPOCH"] = ""
         plt.savefig(handler, dpi=150, format="pdf", metadata={"creationDate": None})
 
     metrics = dict(f1=f1_test, AUC=auc_test)
