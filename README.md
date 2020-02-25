@@ -124,7 +124,7 @@ To get the model:
 2) Add the s3 bucket as a remote if not already there
 ```
 dvc remote add -d myremote s3://opt-out-tools-models/models
-dvc remote modify mynewremote region eu-central-1
+dvc remote modify myremote region eu-central-1
 ```
 3) Pull the cache  of the models from the s3 bucket
 ```
