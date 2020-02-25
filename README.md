@@ -1,7 +1,8 @@
 <p align="center"> <img width="250" height="250" src="opt_out_logo.png"> </p>
 
-<p></p> <h1 align="center"> Opt Out Tools </h1>
-<p></p> <h2 align="center"> Open Source Modeling - Research & Production Code </h2>
+# Opt Out Tools
+
+## Open Source Modeling - Research & Production Code
 
 Quick links:
 
@@ -11,9 +12,7 @@ Quick links:
 - [Use the Repository](#Use-the-Repository)
 - [Code of Conduct](#Code-of-Conduct)
 
-
-Repository Structure
-------------
+## Repository Structure
 
     ├── CONTRIBUTING.md    <- How to contribute to this repository
     ├── README.md          <- The top-level desciption for people interested
@@ -50,33 +49,39 @@ Repository Structure
     ├── mypy.ini           <-  Used for static typing
     └── LICENSE            
 
+## Purpose of the Repository
 
-Purpose of the Repository
---------------------
-There are three purposes of this repo
+There are three purposes of this repo:
+
 - Open source research into online misogyny
 - Using this research to build a production model for the browser extension
 - (Long-term) develop a toolkit for identifying misogyny
 
-How the Repository Works?
---------------------
-### Research
-The research will be carried out in notebooks. This will be used to
-communicate results initially. Naming convention is a number (for ordering), 
-the creator's initials, and a short `-` delimited description, e.g.
-`1.0-jqp-initial-data-exploration`. Folders within the notebooks directory
- are named based on the type of model being studied.
- 
-For further information about contributing research and the PR process, please 
-see [CONTRIBUTING.md](https://github.com/opt-out-tools/study-online-misogyny/blob/documentation/CONTRIBUTING.md).
+## How the Repository Works?
 
-### Production 
+### Research
+
+The research will be carried out in notebooks.
+This will be used to communicate results initially.
+Naming convention is a number (for ordering), the creator's initials,
+ and a short `-` delimited description, e.g.
+`01-jqp-initial-data-exploration`.
+Folders within the notebooks directory are named based on
+the type of model being studied.
+
+For further information about contributing research and
+the PR process, please see
+[CONTRIBUTING.md](https://github.com/opt-out-tools/study-online-misogyny/blob/documentation/CONTRIBUTING.md).
+
+### Production
+
 Once our research has culminated in a model that we believe is production
 ready, it then needs to be implemented with a common API so we can deploy
 it easily. This currently is only a .predict() function, but is subject to
 change in the coming month.
- 
-### Toolkit 
+
+### Toolkit
+
 The long-term vision for this repo is to develop a toolkit for identifying
 /studying online misogyny with the code written in src/ folder. Currently
 this folder contains preprocess pipelines, error analysis scripts and
@@ -85,17 +90,18 @@ acceptance criteria scripts.
 To understand the finer details of how this works, please see the [CONTRIBUTING
 .md](https://github.com/opt-out-tools/study-online-misogyny/blob/documentation/CONTRIBUTING.md)
 
-
-Use the Repository
---------------------
+### Use the Repository
 
 ## Datasets
-The text must be under the column head **text** and the labels under the column 
-head **label**. Misogynistic or harassing is always 1 and not 0. Only dataset 
-with open access is stanford. Please ask about others.
+
+The text must be under the column head **text** and the labels
+under the column head **label**.
+Misogynistic or harassing is always 1 and not 0.
+Only dataset with open access is stanford.
+Please ask about others.
 
 ```
-hatespeech - obtained from Zeerak Waseem. 
+hatespeech - obtained from Zeerak Waseem.
 aws_annotated - our annotations + hatespeech
 stanford_hatespeech - stanford (aws_annotated+snorkel labels) + hatespeech
 gold - stanford_hatespeech + AMI
@@ -104,18 +110,22 @@ rapeglish - scraped from random rape threat generator by Emma Jane
 dataturks - obtained from dataturks crowdsource labeling
 ```
 
-## Installation
+### Installation
 
 #### Conda
 
 Create a new Conda environment
+
 ```
 conda create -n som python=3.7
 ``` 
+
 and activate it with
+
 ```bash
 conda activate som
 ```
+
 Move to the project root directory (e.g. `$ cd study-online-misoginy/`)
 and run the following command:
 ```bash
@@ -142,21 +152,23 @@ python -m pytest
 ```
 
 ## Get the latest Model/Dataset
-We are using [dvc](https://dvc.org/) for this. 
 
-Initially we're just using DVC to provide a basic useful framework to track, 
-save and share models and large data files.
- 
-Eventually to achieve full reproducibility, we'll have to connect code and 
-configuration with the data it processes to produce the result. 
+We are using [dvc](https://dvc.org/) for this.
 
+Initially we're just using DVC to provide a basic useful
+framework to track, save and share models and large data files.
+
+Eventually to achieve full reproducibility, we'll have to
+connect code and configuration with the data it
+processes to produce the result.
 
 To get the model:
-1) Check `dvc` is installed
-```
- dvc --version   
-```
-2) Add the s3 bucket as a remote if not already there
+1. Check DVC is installed
+
+  ```
+   dvc --version   
+  ```
+2. Add the s3 bucket as a remote if not already there
 ```
 dvc remote add -d myremote s3://opt-out-tools-models/models
 dvc remote modify myremote region eu-central-1
@@ -169,16 +181,17 @@ dvc pull
 ```
 dvc checkout <model_filename>.dvc
 ```
+
 ## Add a new Model/Dataset
 
-To add a new version of the model. 
+To add a new version of the model.
 
 ```
 dvc add <model_filename>
 ```
 This command should be used instead of git add on the model file. The above
-command tells Git to ignore the directory and puts it into the cache (while 
-keeping a file link to it in the workspace, so you can continue working the 
+command tells Git to ignore the directory and puts it into the cache (while
+keeping a file link to it in the workspace, so you can continue working the
 same way as before). This is achieved by creating a simple human-readable
 `.dvc` that serves as a pointer to the cache.
 
@@ -196,16 +209,15 @@ dvc push
 Simples!
 
 ## Rerun Model building
-Coming soon
 
+Coming soon
 
 ## Code of Conduct
 
-> Please note that this project is released with a
-> [Contributor Code of Conduct](https://github.com/malteserteresa/opt-out/blob/master/CODE_OF_CONDUCT.md).
-> By participating in this project you agree to abide by its terms.
+Please note that this project is released with a
+[Contributor Code of Conduct](https://github.com/malteserteresa/opt-out/blob/master/CODE_OF_CONDUCT.md).
+By participating in this project you agree to abide by its terms.
 
 --------
 
 <p><small>Project structure based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
-
