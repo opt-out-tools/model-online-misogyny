@@ -51,10 +51,6 @@ Repository Structure
     └── LICENSE            
 
 
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
-
 Purpose of the Repository
 --------------------
 There are three purposes of this repo
@@ -205,6 +201,11 @@ Coming soon
 
 ## Code of Conduct
 
-> Please note that this project is released with a [Contributor Code of 
-Conduct](https://github.com/malteserteresa/opt-out/blob/master/CODE_OF_CONDUCT.
-md). By participating in this project you agree to abide by its terms.
+> Please note that this project is released with a
+> [Contributor Code of Conduct](https://github.com/malteserteresa/opt-out/blob/master/CODE_OF_CONDUCT.md).
+> By participating in this project you agree to abide by its terms.
+
+--------
+
+<p><small>Project structure based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
