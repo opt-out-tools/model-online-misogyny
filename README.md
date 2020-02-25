@@ -23,8 +23,7 @@ Repository Structure
     │
     ├── notebooks          <- Jupyter notebooks. 
     │    
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │                      <- Eventually will contain dashboard
+    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.                     
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
