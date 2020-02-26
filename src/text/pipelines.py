@@ -1,13 +1,13 @@
-from typing import Callable, List
+from typing import List, Callable
 
 import pandas as pd
 
-from src.data.preprocess_text_helpers import (
+from src.text.utils import (
     contractions_unpacker,
+    tokenizer,
     punctuation_cleaner,
     remove_stopwords,
     lowercase,
-    tokenizer,
     normalizer,
 )
 

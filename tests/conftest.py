@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from src.data.preprocess_text_helpers import contractions
+from src.text.utils import contractions
 from tests.domain_objects_for_testing import create_dataframe_of_labeled_tweets
 
 

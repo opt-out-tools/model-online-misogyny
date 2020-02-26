@@ -1,8 +1,8 @@
-from src.data.preprocess_text_helpers import (
+from src.text.utils import (
     contractions_unpacker,
-    lowercase,
-    punctuation_cleaner,
     tokenizer,
+    punctuation_cleaner,
+    lowercase,
 )
 
 

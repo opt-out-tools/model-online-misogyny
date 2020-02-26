@@ -1,0 +1,7 @@
+md5: 10b7bc37e1e66c6db4613e91154676a5
+outs:
+- md5: d0a9211af7d3af9880993414766e18d0
+  path: gold_data_en.csv
+  cache: true
+  metric: false
+  persist: false
