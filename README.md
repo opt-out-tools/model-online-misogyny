@@ -207,6 +207,9 @@ the `stages/` folder or run
 dvc pipeline show --ascii -c stages/train.py
 ```
 
+For more info on comparing experiments see
+<https://dvc.org/doc/tutorials/deep/reproducibility>.
+
 ## Code of Conduct
 
 Please note that this project is released with a
