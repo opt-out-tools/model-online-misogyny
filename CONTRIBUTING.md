@@ -5,16 +5,19 @@ regardless of your skill level or amount of time you are able to contribute.
 
 Quick links:
 
-- [How much time do you have?](#How-much-time-do-you-have?)
+- [Getting Started](#Getting-started)
 - [Project Management](#Project-Management)
 - [Feature Request/Bug Report](#Feature-Request/Bug-Report)
-- [Contributing Code](#Feature-Implementation---Contributing-Code)
+- [Contributing Code](#Contributing-Code)
 - [Non Code Contributions](#Non-Code-Contributions)
 - [Code of Conduct](#Code-of-Conduct)
 
-## How much time do you have?
 
-### Less 10 minutes
+## Getting started
+A great first place to join is the Community is the Slack channel http://opt-out-workspace.slack.com
+
+### How much time do you have?
+#### Less 10 minutes
 
 - Look at our notebooks & talk to a friend about online misogyny and what Opt
   Out Tools
@@ -22,13 +25,13 @@ Quick links:
 - Talk to us on slack about bright ideas you have for new/better
   functionality (to get an invite reach out at @OptOutSocial)
 
-### Less 30 minutes
+#### Less 30 minutes
 
 - Look through the open issues for a problem that is small and sweet to fix
 - Post/tell lots of people about the issue and about Opt Out Tools!
   Use our Twitter handle @OptOutSocial
 
-### Programming (1+ hours)
+#### Programming (1+ hours)
 
 Take a look through the open issues and then check with pull requests to make
 sure that someone isn't already working on it. Please post in an issue to say
@@ -148,14 +151,12 @@ When submitting a feature request, please try and:
 
 - Include relevant documentation wireframes etc.
 
-## Feature Implementation - Contributing Code
+##  Contributing Code
 
 Feature requests and bug fixes become a feature implementation
 issue when anyone has a eureka moment.
 The aim of the feature implementation issue is to identify
 the steps to complete the feature/fix.
-This is done to help the less confident pick up tasks and get clear
-steps on how to complete a PR.
 
 When you've found a feature to implement and are ready to contribute
 to a repo, then begin by forking it on GitHub,
@@ -175,17 +176,47 @@ and involves setting up your git repository:
 
 1. Clone your fork of the repo from your GitHub account to your local disk
 
-Once these steps are complete please see the individual README.md
+Once these steps are complete please see the repository README.md
 for specific installation details.
+
+### Workflow for code contributions
+1. You found an interesting issue you want to work on
+    - If someone else is already working on it, contact that person on slack or github and organize yourself
+    - If you want to work on an open issue, post a comment telling that you will work on that issue; we will assign you
+    - Make sure to check the comments before starting to work on an open issue even when no one is assigned to it (there might have been a delay)
+    - **Ask for clarification from whom created the issue if needed**
+1. Create a new branch to take care of the issue
+    - Use the following naming scheme for the branch:
+        - For new features: `feature/<issue-number>-<name>`
+        - For bug fixes: `fix/<name>`
+        - Where `<name>` is freely chosen descriptive name
+1. Submit a pull request for the issue
+    - Give your pull request a helpful title that summarises what your contribution does
+    - Remember to mention which issue the PR will close.
+    - Make sure your code passes the tests.
+    - Make sure your code is properly commented and documented, and make sure the documentation renders properly
+    - Tests are necessary for enhancements to be accepted.
+    - Make sure that your PR does not add any linter violations.
+1. Developer assigns / someone takes the PR to review
+    - Ask someone to review your PR
+1. Reviewer accepts PR
+    - Reviewer writes comments that you are supposed to take care of.
+    - After taking care of things, ping reviewer.
+    - Wait that reviewer accepts your PR
+1. Merge PR to development branch
+    - Merge your PR to the current release branch(see [Branch Naming Convention](#Branch-Naming-Convention)) not to `master`
 
 ### Pull Request Checklist
 
 #### Research
 
-Please make sure that the naming convention fits current standards and that
-the notebook is in the correct folder. Also please make sure your notebook
-is explained clearly, because if it takes a while to understand, there's a
-lower chance the PR will be accepted.
+The PR checklist:
+
+1) Correct naming convention of branch/notebooks/scripts
+2) Sufficiently novel to be merged, otherwise will stay on branch
+3) Notebook is in correct folder
+4) Clear illustration of results: comparison to baselines/benchmarks and acceptance criteria
+
 
 If you have written a function that you think _"wow that is so great/useful
 I think others should have access to it"_ then this brilliant piece of code
@@ -199,7 +230,13 @@ and benchmarking of the production model.
 There will also be the facility to use Sphinx documentation
 to explain the model.
 
-Please make sure you have used DVC correctly to rerun building the model.
+The PR checklist:
+
+1) Correct naming convention
+2) Correct API (to be designed/built)
+3) dvc commands to run
+4) Reference to research in study-online-misogyny that support the proposed algorithm or to  sufficiently cited research papers
+
 
 #### Tool-kit
 
@@ -215,23 +252,6 @@ work before receiving a full review – should be prefixed with [WIP]
 (to indicate a work in progress) and changed to [MRG] when it matures.
 For a more detailed explanation of what these mean to the
 organization please see [Project Management](#Project-Management).
-
-In order to ease the reviewing process, we recommend that your
-contribution complies with the following rules before
-marking a PR as [MRG].
-The bolded ones are especially important:
-
-- Give your pull request a helpful title that summarises what
-  your contribution does
-  This title will often become the commit message once merged
-  so it should summarize your contribution.
-  In some cases “Fix \<ISSUE TITLE\>” is enough.
-  “Fix #\<ISSUE NUMBER\>” is never a good title.
-- Make sure your code passes the tests.
-- Make sure your code is properly commented and documented,
-  and make sure the documentation renders properly
-- Tests are necessary for enhancements to be accepted.
-- Make sure that your PR does not add any linter violations.
 
 Follow the Coding guidelines:
 
@@ -263,7 +283,7 @@ that branch for each minor release.
 For example, beta users will use a beta or a release candidate,
 which will have a 0.2beta1 release name and tag on the 0.2.X branch.
 
-## Contributing Anything Other than Code
+## Non Code Contributions
 
 Non code contributions are vital to this project. A prime example of this is
  sharing papers and notes. We do this via the wiki attached to this project.
