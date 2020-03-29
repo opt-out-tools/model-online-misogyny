@@ -55,7 +55,7 @@ Data collection phase:
 
 -> corpus of 83 million tweets for English and 72 millions for Spanish
 
-*Step 2*:
+*Step 2*:  
 - Among all the collected texts we selected a subset of tweets querying the database with the co-presence of keywords.
 - No further details about this second step are mentioned (e.g. keywords)
 - Final data set is created after the labelling phase.
