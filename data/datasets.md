@@ -46,10 +46,10 @@ For description of types, see paper.
 #### Data collection process
 *Step 1*:
 
-Three approaches were employed to collect misogynistic text on Twitter:  
-– Streaming download using a set of representative keywords, e.g. bi\*\*h, w\*\*re, c\*nt
-– Monitoring of potential victims accounts, e.g. gamergate victims and public feminist women
-– Downloading the history of identified misogynist, i.e. explicitly declared hate against women on their Twitter profiles
+Three approaches were employed to collect misogynistic text on Twitter:
+* Streaming download using a set of representative keywords, e.g. bi\*\*h, w\*\*re, c\*nt
+* Monitoring of potential victims accounts, e.g. gamergate victims and public feminist women
+* Downloading the history of identified misogynist, i.e. explicitly declared hate against women on their Twitter profiles
 
 Data collection phase:
 20th of July 2017 to 30th of November 2017
