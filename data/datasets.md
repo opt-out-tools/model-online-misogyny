@@ -47,7 +47,7 @@ For description of types, see paper.
 *Step 1*:
 
 Three approaches were employed to collect misogynistic text on Twitter:  
-– Streaming download using a set of representative keywords, e.g. bi**h, w**re, c*nt
+– Streaming download using a set of representative keywords, e.g. bi\*\*h, w\*\*re, c\*nt
 – Monitoring of potential victims accounts, e.g. gamergate victims and public feminist women
 – Downloading the history of identified misogynist, i.e. explicitly declared hate against women on their Twitter profiles
 
