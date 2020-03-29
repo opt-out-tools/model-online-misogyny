@@ -70,14 +70,11 @@ contributor.
 
 #### Data set figures
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|   | Train  |  Test |
+|--:|--:|--:|
+| English  | 3251  | 726  |
+| Spanish  | 3307  | 831  |
           Train    Test
-English   3251     726
-Spanish   3307     831
 
 #### Columns
 “id”, “text”, “misogynous”, “misogyny category”, “target”
