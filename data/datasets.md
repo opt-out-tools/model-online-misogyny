@@ -44,7 +44,8 @@ Data set provided to solve two tasks:
 For description of types, see paper.
 
 #### Data collection process
-*Step 1*:  
+*Step 1*:
+
 Three approaches were employed to collect misogynistic text on Twitter:  
 – Streaming download using a set of representative keywords, e.g. bi**h, w**re, c*nt
 – Monitoring of potential victims accounts, e.g. gamergate victims and public feminist women
@@ -52,7 +53,6 @@ Three approaches were employed to collect misogynistic text on Twitter:
 
 Data collection phase:
 20th of July 2017 to 30th of November 2017
-
 -> corpus of 83 million tweets for English and 72 millions for Spanish
 
 *Step 2*:  
