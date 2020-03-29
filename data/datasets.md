@@ -16,8 +16,6 @@ If you want to add a dataset to this page, please make sure to include the info 
 
 ### 1. Waseem, Zeerak, and Dirk Hovy. "Hateful symbols or hateful people? predictive features for hate speech detection on twitter." Proceedings of the NAACL student research workshop. 2016.
 
-Link: http://personales.upv.es/prosso/resources/FersiniEtAl_IberEval18.pdf
-
 #### Description
 ...
 
@@ -29,6 +27,8 @@ Link: http://personales.upv.es/prosso/resources/FersiniEtAl_IberEval18.pdf
 
 ### 2. Anzovino, Maria, Elisabetta Fersini, and Paolo Rosso. "Overview of the Task on Automatic Misogyny"
 Identification at IberEval 2018." Proceedings of the Third Workshop on Evaluation of Human Language Technologies for Iberian Languages (IberEval 2018)
+
+Link: http://personales.upv.es/prosso/resources/FersiniEtAl_IberEval18.pdf
 
 #### Description
 Data set provided to solve two tasks:
@@ -69,6 +69,12 @@ contributor.
 2) The remaining tweets were labeled through a majority voting approach by external contributors on the CrowdFlower3 platform. The gold standard has been used for the quality control of the judgements throughout the second step.
 
 #### Data set figures
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
           Train    Test
 English   3251     726
 Spanish   3307     831
