@@ -4,9 +4,46 @@ The purpose of this guide is to help you contribute to this repository.
 
 Quick links:
 
--
--
--
+- [Setting up the repository](#Setting-up-the-repository)
+- [Finding an issue to work on](#Finding-an-issue-to-work-on)
+- [Working on a research issue](#Working-on-a-research-issue)
+- [Working on a code issue](#Working-on-a-code-issue)
+- [Submitting an issue](#Submitting-an-issue)
+
+## Setting up the repository
+
+Please follow the below steps to set up the repository on your local disk:
+
+1. Make sure you meet the [software requirements](#Software-requirements) for working with this repository.
+2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+the repository and
+[clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+the forked repository on your local disk.
+4. In your terminal, use the following command to create a new Conda environment:
+
+```bash
+conda create -n som python=3.7
+```
+
+5. Activate the environment using the following command:
+
+```bash
+conda activate som
+```
+
+6. Move to the repository root directory and install the dependencies with the below command:
+
+```bash
+pip install -r requirements.txt
+```
+
+7. Download the spaCy language model needed for our machine learning pipeline with the following command:
+
+```bash
+python -m spacy download en_core_web_md
+```
+
+You're all set!
 
 ## Finding an issue to work on
 
@@ -43,11 +80,12 @@ Please follow the below steps if your issue is research-related:
 
 Please follow the below steps if your issue is code-related:
 
-1. Create a branch to take care of the issue using the following naming convention for the branch:
-  - For feature implementations/enhancements: `feature/<issue-number>-<name>`
-  - For bug fixes: `fix/<name>`
+1. In your local copy of the repository, create a branch to take care of the issue
+using the following naming convention for the branch:
+  - For feature implementations/enhancements: `feature/<issue-number>-<insert_name_here>`
+  - For bug fixes: `fix/<insert_name_here>`
 2. Work in your branch in the `src` folder until you are satisfied with your code.
-3. Once you're satisfied with your code, make sure the DVC commands run correctly with your code.
+3. Once you're satisfied with your code, run the machine learning pipeline.
 4. Make sure your code passes the CI tests.
 5. Document your code in [...] and make sure the documentation renders properly.
 6. Submit a pull request (PR) for your issue:

@@ -11,18 +11,30 @@ The extension is currently in its alpha version and available for download in th
 Quick links:
 
 - [Purpose of the repository](#Purpose-of-the-repository)
-- [Repository structure](#Repository-structure)
 - [Software requirements](#Software-requirements)
+- [Repository structure](#Repository-structure)
 - [Repository management](#Repository-management)
 - [Code of Conduct](#Code-of-Conduct)
 
 ## Purpose of the repository
 
-There are three purposes of this repo:
+There are three purposes of this repository:
 
 - Researching online misogyny
 - Building a production model for the browser extension based on our research
 - Developing a toolkit for identifying online misogyny (long-term)
+
+## Software requirements
+
+The following software is required to work with this repository:
+
+- [Python](https://www.python.org/downloads/)
+- [pip](https://pypi.org/project/pip/)
+- [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+- [pre-commit](https://pre-commit.com/#install)
+- [spaCy](https://spacy.io/usage)
+- [Jupyter Notebook](https://jupyter.org/install)
+- [DVC](https://dvc.org/doc/install)
 
 ## Repository structure
 
@@ -34,19 +46,22 @@ There are three purposes of this repo:
     ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of
     │                              [issues](https://github.com/opt-out-tools/model-online-misogyny/issues) for this
     │                              repository.
-    ├── data                    <- Folder for documenting and analyzing datasets that tackle the problem of misogyny/hate speech and their labeling process, and
+    ├── data                    <- Folder for documenting and analyzing datasets that tackle the problem of
+    │                              misogyny/hate speech and their labeling process, and
     │                              instructions on how to request them if necessary.
     ├── docs                    <- Folder containing the files necessary to produce documentation with
     │                              [Sphinx](https://www.sphinx-doc.org/en/master/).
     ├── models                  <- Folder for saving trained and serialized models fit for production.
     ├── notebooks               <- Folder for saving [Jupyter](https://jupyter.org/) notebooks (research folder).
-    ├── reports                 <- Folder for saving data analysis in formats other than Jupyter (HTML, PDF, LaTeX, etc.).
+    ├── reports                 <- Folder for saving data analysis in formats other than Jupyter (HTML, PDF, LaTeX,
+    │                              etc.).
     ├── src                     <- Folder containing the source code to train models. The source code currently
     │   │                          runs preprocessing pipelines, error analysis scripts and acceptance criteria
     │   │                          scripts.
     │   └── text                <- Folder containing the utility modules for text processing in the pipeline.
     ├── stages                  <- Folder containing the files necessary to run the machine learning pipeline.
-    ├── tests                   <- Folder for saving tests for the machine learning pipeline to make sure that the source code works as expected.
+    ├── tests                   <- Folder for saving tests for the machine learning pipeline to make sure that the
+    │                              source code works as expected.
     ├── .flake8                 <- ???
     ├── .gitignore              <- List of the files not to add to this repository when committing to it.
     ├── .pre-commit-config.yaml <- ???
@@ -59,47 +74,6 @@ There are three purposes of this repo:
     ├── opt_out_logo.png        <- Logo used in the README of this repository.
     ├── requirements.txt        <- Requirements file for reproducing the analysis environment.
     └── setup.py                <- Installation file for the source code.
-
-## Software requirements
-
-### Python
-
-Create a new Conda environment
-
-```
-conda create -n som python=3.7
-```
-
-and activate it with
-
-```bash
-conda activate som
-```
-
-(you can alternatively create an environment with `virtualenv`
-but your mileage may vary).
-
-Move to the project root directory (e.g. `$ cd study-online-misoginy/`)
-and install package dependencies as follows:
-```bash
-pip install -r requirements.txt
-```
-
-### Spacy Model
-
-There is a separate command for downloading the Spacy language model
-needed for our ML pipeline:
-```bash
-python -m spacy download en_core_web_md
-```
-
-### Pre-commit Hooks
-
-Pre-commit will make sure that the code we commit is
-kosher or close enough:
-```bash
-pre-commit install
-```
 
 ## Repository management
 
