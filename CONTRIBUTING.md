@@ -70,10 +70,6 @@ working on the issue.
 
 Please follow the below steps if your issue is research-related:
 
-1.
-
-
-
 
 
 ## Working on a code issue
@@ -106,8 +102,6 @@ Congratulations, you have contributed code to the **OOT** project!
 
 ## Submitting an issue
 
-### Feature Request/Bug Report
-
 We use GitHub issues to track all bugs and feature requests;
 feel free to open an issue if you have found a bug
 or wish to request a feature.
@@ -125,7 +119,15 @@ the following rules before submitting:
 - If you are submitting a bug report, we strongly encourage you
   to follow the guidelines in the _How to write a good Bug Report_ section.
 
-### How to write a good Bug Report
+### Submitting a feature request
+
+When submitting a feature request, please try and:
+
+  - Be clear as possible
+
+  - Include relevant documentation wireframes etc.
+
+### Submitting a bug
 
 When you submit an issue to Github, please do your best
 to follow these guidelines!
@@ -145,14 +147,6 @@ This will make it a lot easier to provide you with good feedback:
 1. Please include your operating system type and version number,
    as well as your laguage (python, javacript) version and other
    important packages such as scikit-learn, numpy, and scipy.
-
-### How to write a good Feature Request
-
-When submitting a feature request, please try and:
-
-- Be clear as possible
-
-- Include relevant documentation wireframes etc.
 
 
 ### Pull Request Checklist
