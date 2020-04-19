@@ -85,16 +85,22 @@ using the following naming convention for the branch:
   - For feature implementations/enhancements: `feature/<issue-number>-<insert_name_here>`
   - For bug fixes: `fix/<insert_name_here>`
 2. Work in your branch in the `src` folder until you are satisfied with your code.
-3. Once you're satisfied with your code, run the machine learning pipeline.
-4. Make sure your code passes the CI tests.
-5. Document your code in [...] and make sure the documentation renders properly.
-6. Submit a pull request (PR) for your issue:
+3. Once you're satisfied with your code, run the machine learning pipeline with the following command:
+
+```bash
+dvc repro
+```
+
+4. If the machine learning pipeline runs without any problem, document your code
+in [...] and make sure the documentation renders properly.
+5. Submit a pull request (PR) for your issue:
   - Give your PR a helpful title that summarises what your contribution does.
   - Reference the issue the PR will close in the title or the description of the PR.
-7. Answer and address any comment reviewers add to your PR.
-8. Once your PR is approved by a reviewer, merge it to the current release
-branch (see [Branch Naming Convention](#Branch-Naming-Convention)) not to
-`master`.
+6. Answer and address any comment reviewers add to your PR.
+7. Once your PR is approved by a reviewer, merge it to the current release
+branch, not to `master`.
+
+Congratulations, you have contributed code to the **OOT** project!
 
 ## Submitting an issue
 
