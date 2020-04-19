@@ -10,10 +10,19 @@ The extension is currently in its alpha version and available for download in th
 
 Quick links:
 
-- [Repository structure](#Repository-structure)
 - [Purpose of the repository](#Purpose-of-the-repository)
+- [Repository structure](#Repository-structure)
 - [Software requirements](#Software-requirements)
+- [Repository management](#Repository-management)
 - [Code of Conduct](#Code-of-Conduct)
+
+## Purpose of the repository
+
+There are three purposes of this repo:
+
+- Researching online misogyny
+- Building a production model for the browser extension based on our research
+- Developing a toolkit for identifying online misogyny (long-term)
 
 ## Repository structure
 
@@ -52,14 +61,6 @@ Quick links:
     ├── opt_out_logo.png        <- Logo used in the README of this repository.
     ├── requirements.txt        <- Requirements file for reproducing the analysis environment.
     └── setup.py                <- Installation file for the source code.
-
-## Purpose of the repository
-
-There are three purposes of this repo:
-
-- Researching online misogyny
-- Building a production model for the browser extension based on our research
-- Developing a toolkit for identifying online misogyny (long-term)
 
 ## Software requirements
 
@@ -102,9 +103,17 @@ kosher or close enough:
 pre-commit install
 ```
 
+## Repository management
+
+This repository is managed by the OOT data team. If you have any question,
+please reach out to the following people on Github:
+
+- Andrada: `andra-pumnea`
+- Matteo: `teoguso`
+
 ## Code of conduct
 
-Please note that this project is released with a
+Please note that this repository is part of the **Opt Out Tools** project which is released with a
 [Contributor Code of Conduct](https://github.com/malteserteresa/opt-out/blob/master/CODE_OF_CONDUCT.md).
 By participating in this project you agree to abide by its terms.
 
