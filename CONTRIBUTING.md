@@ -1,82 +1,66 @@
 # Contributor's Guide
 
-The purpose of this guide is to help you contribute to Opt Out Tools modeling,
-regardless of your skill level or amount of time you are able to contribute.
+The purpose of this guide is to help you contribute to this repository.
 
 Quick links:
 
-- [Getting Started](#Getting-started)
-- [Project Management](#Project-Management)
-- [Feature Request/Bug Report](#Feature-Request/Bug-Report)
-- [Contributing Code](#Contributing-Code)
-- [Non Code Contributions](#Non-Code-Contributions)
-- [Code of Conduct](#Code-of-Conduct)
+-
+-
+-
 
-## Project overview
+## Finding an issue to work on
+
+You can find issues to work on in the following places:
+
+- [Data team project board](https://github.com/orgs/opt-out-tools/projects/41)
+- [Repository Issues tab](https://github.com/opt-out-tools/model-online-misogyny/issues)
+
+When choosing an issue to work on:
+
+- If the issue is unassigned, comment on the issue that you would like to take
+care of it and someone in the data team will assign you.
+- If the issue is already assigned to someone, contact that person on Slack or
+Github to see how you can work with them.
+
+Once you are assigned on an issue:
+
+- Make sure to check all comments on the issue before starting to work.
+- **Ask for clarification from the person who created the issue if needed.**
+- Make sure to add a `[WIP]` label in the issue title once you start actively
+working on the issue.
+
+## Working on a research issue
+
+Please follow the below steps if your issue is research-related:
+
+1.
 
 
-## Contributing research
 
-## Contributing code
 
-## Project Management
 
-We use the Github projects board to organise our work on the organization
-page. For a high-level overview of our modeling strategy please see the
-[Modeling Roadmap](https://github.com/orgs/opt-out-tools/projects/41). For
-more specific projects, please check the
-[organization's projects list](https://github.com/orgs/opt-out-tools/projects).
+## Working on a code issue
 
-We use Github issues to create, discuss or carry out work. Each issue can take
-one of three forms, a either a bug, a feature request or feature
-implementation (task).
+Please follow the below steps if your issue is code-related:
 
-- Bug: a problem with the code that needs fixing
-- Feature request: an idea for new features
-- Feature implementation: concrete steps to be completed to add
-  the feature/fix the bug
+1. Create a branch to take care of the issue using the following naming convention for the branch:
+  - For feature implementations/enhancements: `feature/<issue-number>-<name>`
+  - For bug fixes: `fix/<name>`
+2. Work in your branch in the `src` folder until you are satisfied with your code.
+3. Once you're satisfied with your code, make sure the DVC commands run correctly with your code.
+4. Make sure your code passes the CI tests.
+5. Document your code in [...] and make sure the documentation renders properly.
+6. Submit a pull request (PR) for your issue:
+  - Give your PR a helpful title that summarises what your contribution does.
+  - Reference the issue the PR will close in the title or the description of the PR.
+7. Answer and address any comment reviewers add to your PR.
+8. Once your PR is approved by a reviewer, merge it to the current release
+branch (see [Branch Naming Convention](#Branch-Naming-Convention)) not to
+`master`.
 
-Bug and feature requests become feature implementations when someone has a
-brainwave of how to complete the task.
-Thus a feature implementation issue
-will contain clear instructions of how to complete task.
+## Submitting an issue
 
-Each issue should be labeled with a minimum of two labels, one to indicate
-priority and the second to indicate size of task.
-It should also belong to a milestone.
-We have four milestones over the next months, which look like this:
-
-Milestone name and description:
-
-- 0.1: the minimum viable product (MVP), the minimum
-   functionality our tool/s can have to be ready
-- 0.2: what is then expected by the end user for the tool/s to have
-- 0.3: what features would be good to have in the tool/s
-- 0.4: the future of our tool/s
-
-Concrete details of what each milestone contains can be found
-in the tool's roadmap.
-For example, to see what we want to achieve in terms of Activism
-by the 0.1 milestone, see the
-[Activism Roadmap](https://github.com/orgs/opt-out-tools/projects/37)
-
-To find out what tools we have, please see
-[Our Tools and Our Vision](https://github.com/opt-out-tools/start-here#Our-Tools-and-Our-Vision).
-An overview of tasks for each milestone can be found
-[here](https://github.com/opt-out-tools/start-her#Tools-Roadmap).
-
-Each issue should belong to a step in the roadmap which will then be sorted
-into a project.
-
-Issues may have two kinds of squared bracket labels in the title:
-
-- [WIP]: indicate you are working on something to avoid duplicated work,
-request broad review of functionality or API, or seek collaborators (use the
-help wanted label).
-- [MRG]: the contribution is complete and should be subjected to a detailed
-review
-
-## Feature Request/Bug Report
+### Feature Request/Bug Report
 
 We use GitHub issues to track all bugs and feature requests;
 feel free to open an issue if you have found a bug

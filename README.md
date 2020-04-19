@@ -34,23 +34,21 @@ There are three purposes of this repo:
     ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of
     │                              [issues](https://github.com/opt-out-tools/model-online-misogyny/issues) for this
     │                              repository.
-    ├── data                    <- Folder containing the dataset on which the model currently in use in the **Opt Out**
-    │                              browser extension was trained + documentation on candidate datasets for next
-    │                              releases.
+    ├── data                    <- Folder for documenting and analyzing datasets that tackle the problem of misogyny/hate speech and their labeling process, and
+    │                              instructions on how to request them if necessary.
     ├── docs                    <- Folder containing the files necessary to produce documentation with
     │                              [Sphinx](https://www.sphinx-doc.org/en/master/).
     ├── models                  <- Folder for saving trained and serialized models fit for production.
     ├── notebooks               <- Folder for saving [Jupyter](https://jupyter.org/) notebooks (research folder).
-    ├── references              <- ???
-    ├── reports                 <- Folder for saving generated data analysis in formats other than Jupyter (HTML, PDF, LaTeX, etc.).
+    ├── reports                 <- Folder for saving data analysis in formats other than Jupyter (HTML, PDF, LaTeX, etc.).
     ├── src                     <- Folder containing the source code to train models. The source code currently
     │   │                          runs preprocessing pipelines, error analysis scripts and acceptance criteria
     │   │                          scripts.
     │   └── text                <- Folder containing the utility modules for text processing in the pipeline.
     ├── stages                  <- Folder containing the files necessary to run the machine learning pipeline.
-    ├── tests                   <- ???
+    ├── tests                   <- Folder for saving tests for the machine learning pipeline to make sure that the source code works as expected.
     ├── .flake8                 <- ???
-    ├── .gitignore              <- ???
+    ├── .gitignore              <- List of the files not to add to this repository when committing to it.
     ├── .pre-commit-config.yaml <- ???
     ├── .pylintrc               <- ???
     ├── CONTRIBUTING.md         <- Instructions on how to contribute to this repository.
