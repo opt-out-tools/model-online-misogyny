@@ -93,9 +93,11 @@ dvc repro
 
 4. If the machine learning pipeline runs without any problem, document your code
 in [...] and make sure the documentation renders properly.
-5. Submit a pull request (PR) for your issue:
+5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue:
   - Give your PR a helpful title that summarises what your contribution does.
-  - Reference the issue the PR will close in the title or the description of the PR.
+  - Reference the issue the PR addresses in the title or the description of the PR.
+  - Assign one or several reviewers to your PR. If you do not know anyone in the
+    data team, assign one of the people listed in [Repository management](#repository-management).
 6. Answer and address any comment reviewers add to your PR.
 7. Once your PR is approved by a reviewer, merge it to the current release
 branch, not to `master`.
@@ -152,60 +154,6 @@ When submitting a feature request, please try and:
 
 - Include relevant documentation wireframes etc.
 
-##  Contributing Code
-
-Feature requests and bug fixes become a feature implementation
-issue when anyone has a eureka moment.
-The aim of the feature implementation issue is to identify
-the steps to complete the feature/fix.
-
-When you've found a feature to implement and are ready to contribute
-to a repo, then begin by forking it on GitHub,
-then submit a “pull request” (PR).
-
-The first few steps are generic to all Opt Out Tools repos
-and involves setting up your git repository:
-
-1. Create an account on GitHub if you do not already have one.
-
-1. Fork the project repo: click on the ‘Fork’ button
-   near the top of the page.
-   This creates a copy of the code under your account
-   on the GitHub user account.
-   For more details on how to fork a repository see
-   <https://help.github.com/en/github/getting-started-with-github/fork-a-repo>
-
-1. Clone your fork of the repo from your GitHub account to your local disk
-
-Once these steps are complete please see the repository README.md
-for specific installation details.
-
-### Workflow for code contributions
-1. You found an interesting issue you want to work on
-    - If someone else is already working on it, contact that person on slack or github and organize yourself
-    - If you want to work on an open issue, post a comment telling that you will work on that issue; we will assign you
-    - Make sure to check the comments before starting to work on an open issue even when no one is assigned to it (there might have been a delay)
-    - **Ask for clarification from whom created the issue if needed**
-1. Create a new branch to take care of the issue
-    - Use the following naming scheme for the branch:
-        - For new features: `feature/<issue-number>-<name>`
-        - For bug fixes: `fix/<name>`
-        - Where `<name>` is freely chosen descriptive name
-1. Submit a pull request for the issue
-    - Give your pull request a helpful title that summarises what your contribution does
-    - Remember to mention which issue the PR will close.
-    - Make sure your code passes the tests.
-    - Make sure your code is properly commented and documented, and make sure the documentation renders properly
-    - Tests are necessary for enhancements to be accepted.
-    - Make sure that your PR does not add any linter violations.
-1. Developer assigns / someone takes the PR to review
-    - Ask someone to review your PR
-1. Reviewer accepts PR
-    - Reviewer writes comments that you are supposed to take care of.
-    - After taking care of things, ping reviewer.
-    - Wait that reviewer accepts your PR
-1. Merge PR to development branch
-    - Merge your PR to the current release branch(see [Branch Naming Convention](#Branch-Naming-Convention)) not to `master`
 
 ### Pull Request Checklist
 
@@ -272,10 +220,6 @@ Follow the Coding guidelines:
   If relevant, please also add references in the literature,
   with PDF links when possible.
 
-### CI/CD
-
-We have Circle CI in two of our code repos.
-
 ### Branch Naming Convention
 
 We use a branch for each major release, and tags on
@@ -283,13 +227,3 @@ that branch for each minor release.
 
 For example, beta users will use a beta or a release candidate,
 which will have a 0.2beta1 release name and tag on the 0.2.X branch.
-
-## Non Code Contributions
-
-Non code contributions are vital to this project. A prime example of this is
- sharing papers and notes. We do this via the wiki attached to this project.
-
-## Code of Conduct
-
-Please note that this project is released with a
-[Contributor Code of Conduct](https://github.com/opt-out-tools/opt-out/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
