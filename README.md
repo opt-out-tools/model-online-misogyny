@@ -14,7 +14,7 @@ Quick links:
 - [Software requirements](#Software-requirements)
 - [Repository structure](#Repository-structure)
 - [Repository management](#Repository-management)
-- [Code of Conduct](#Code-of-Conduct)
+- [Code of conduct](#Code-of-conduct)
 
 ## Purpose of the repository
 
@@ -38,21 +38,17 @@ The following software is required to work with this repository:
 
 ## Repository structure
 
-    ├── .circleci               <- Folder containing the
-    │                              [CircleCI](https://circleci.com/docs/2.0/about-circleci/#section=getting-started)
-    │                              configuration file for this repository.
-    ├── .dvc                    <- Folder containing the [DVC](https://dvc.org/doc/home) configuration file for this
-    │                              repository.
-    ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of
-    │                              [issues](https://github.com/opt-out-tools/model-online-misogyny/issues) for this
+    ├── .circleci               <- Folder containing the CircleCI configuration file for this repository.
+    ├── .dvc                    <- Folder containing the DVC configuration file for this repository.
+    ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of issues for this
     │                              repository.
     ├── data                    <- Folder for documenting and analyzing datasets that tackle the problem of
     │                              misogyny/hate speech and their labeling process, and
-    │                              instructions on how to request them if necessary.
+    │                              instructions on how to request them (if applicable).
     ├── docs                    <- Folder containing the files necessary to produce documentation with
-    │                              [Sphinx](https://www.sphinx-doc.org/en/master/).
+    │                              Sphinx.
     ├── models                  <- Folder for saving trained and serialized models fit for production.
-    ├── notebooks               <- Folder for saving [Jupyter](https://jupyter.org/) notebooks (research folder).
+    ├── notebooks               <- Folder for saving Jupyter notebooks.
     ├── reports                 <- Folder for saving data analysis in formats other than Jupyter (HTML, PDF, LaTeX,
     │                              etc.).
     ├── src                     <- Folder containing the source code to train models. The source code currently
@@ -77,7 +73,7 @@ The following software is required to work with this repository:
 
 ## Repository management
 
-This repository is managed by the OOT data team. If you have any question,
+This repository is managed by the **Opt Out Tools** data team. If you have any question,
 please reach out to the following people on Github:
 
 - Andrada: `andra-pumnea`
