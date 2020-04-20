@@ -117,10 +117,15 @@ in the `docs` folder of this repository and make sure the documentation renders 
     data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
 6. Answer and address any comment reviewers add to your PR.
 7. Once your PR is approved by a reviewer and has passed all CI checks, **merge it
-to the current release branch, not to `master`**. **NOTE:** If merging your PR
-means that some other issues/PRs should be closed, please use [keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords) to close them at the same time (e.g., "Fixes #1234"; multiple issues/PRs are allowed as long as
-each one is preceded by a keyword). If your PR is simply related to some other
-issues/PRs, create a link to them without using the keywords (e.g., "See also #1234").
+to the current release branch, not to `master`**.
+
+**NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
+[keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)
+to close them at the same time (e.g., "Fixes #1234"; multiple issues/PRs are
+allowed as long as each one is preceded by a keyword). If your PR is simply
+related to some other issues/PRs, create a link to them without using the
+keywords (e.g., "See also #1234").
+
 Congratulations, you have contributed code to the **OOT** project!
 
 ## Submitting an issue
