@@ -14,7 +14,8 @@ Quick links:
 
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure you meet the [software requirements](#Software-requirements) for working with this repository.
+1. Make sure your local environment meets the [software requirements](./README.md#Software-requirements)
+for working with this repository.
 2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -31,7 +32,7 @@ conda create -n som python=3.7
 conda activate som
 ```
 
-6. Move to the repository root directory and install the dependencies with the below command:
+6. At the root of the repository, install the dependencies with the below command:
 
 ```bash
 pip install -r requirements.txt
@@ -43,7 +44,7 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_md
 ```
 
-You're all set!
+Congratulations, you're all set!
 
 ## Finding an issue to work on
 
