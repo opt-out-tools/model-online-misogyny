@@ -69,8 +69,9 @@ working on the issue.
 
 ## Working on a research issue
 
-Please follow the below steps if your issue is research-related:
+### Dataset research
 
+### Algorithm research
 
 
 ## Working on a code issue
@@ -79,8 +80,8 @@ Please follow the below steps if your issue is code-related:
 
 1. In your local copy of the repository, create a branch to take care of the issue
 using the following naming convention for the branch:
-  - For feature implementations/enhancements: `feature/<issue-number>-<insert_name_here>`
-  - For bug fixes: `fix/<insert_name_here>`
+  - For feature implementations/enhancements: `feature/<issue-number>-<descriptive_name>`
+  - For bug fixes: `fix/<descriptive_name>`
 2. Work in your branch in the `src` folder until you are satisfied with your code.
 3. Once you're satisfied with your code, run the machine learning pipeline with the following command:
 
@@ -89,65 +90,52 @@ dvc repro
 ```
 
 4. If the machine learning pipeline runs without any problem, document your code
-in [...] and make sure the documentation renders properly.
-5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue:
-  - Give your PR a helpful title that summarises what your contribution does.
-  - Reference the issue the PR addresses in the title or the description of the PR.
+in the `docs` folder of this repository and make sure the documentation renders properly.
+5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue. Make sure to:
+  - Give your PR a helpful title that summarizes what your contribution does.
+  - Reference the issue the PR addresses in the description of the PR.
+  - Either reference your research in the `notebooks` and/or `reports` folder of this
+    repository or to sufficiently cited research papers to support the proposed
+    algorithm in the description of the PR.
   - Assign one or several reviewers to your PR. If you do not know anyone in the
-    data team, assign one of the people listed in [Repository management](#repository-management).
+    data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
 6. Answer and address any comment reviewers add to your PR.
-7. Once your PR is approved by a reviewer, merge it to the current release
-branch, not to `master`.
+7. Once your PR is approved by a reviewer and has passed all CI checks, **merge it to
+the current release branch, not to `master`**.
 
 Congratulations, you have contributed code to the **OOT** project!
 
 ## Submitting an issue
 
-We use GitHub issues to track all bugs and feature requests;
-feel free to open an issue if you have found a bug
-or wish to request a feature.
+We use Github issues to track all bugs and feature requests, feel free to [open](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
+one if you have found a bug or wish to request a feature.
 
-In case you experience issues using any repo, do not hesitate
-to submit a ticket to the Bug Tracker of the relevant repo.
-You are also welcome to post feature requests or pull requests.
-
-It is recommended to check that your issue complies with
-the following rules before submitting:
+Before submitting an issue, please do the following:
 
 - Verify that your issue is not being currently addressed by
-  other issues or pull requests.
+other issues or pull requests.
+- Read the instructions on how to write a feature request or a bug report in the
+sections below.
 
-- If you are submitting a bug report, we strongly encourage you
-  to follow the guidelines in the _How to write a good Bug Report_ section.
-
-### Submitting a feature request
+### How to write a feature request
 
 When submitting a feature request, please try and:
 
-  - Be clear as possible
+- Be clear as possible.
+- Include relevant documentation, wireframes, etc.
 
-  - Include relevant documentation wireframes etc.
+### How to write a bug report
 
-### Submitting a bug
+When submitting a bug report, please try and:
 
-When you submit an issue to Github, please do your best
-to follow these guidelines!
-This will make it a lot easier to provide you with good feedback:
-
-1. The ideal bug report contains a short reproducible code snippet,
-   this way anyone can try to reproduce the bug easily
-   (see this for more details).
-   If your snippet is longer than around 50 lines,
-   please link to a gist or a github repo.
-
-1. If not feasible to include a reproducible snippet, please
-   be specific about what models, data and functions that are involved.
-
-1. If an exception is raised, please provide the full traceback.
-
-1. Please include your operating system type and version number,
-   as well as your laguage (python, javacript) version and other
-   important packages such as scikit-learn, numpy, and scipy.
+- Include a short reproducible code snippet. If your snippet is longer than around
+50 lines, please link to a gist or a Github repo. If you cannot include a
+reproducible snippet, please be specific about the models, data and functions
+involved in the bug.
+- If an exception is raised, please provide the full traceback.
+- Please include your operating system type and version number, as well as your
+language version (python, javacript) and other important packages such as
+scikit-learn, numpy, and scipy.
 
 
 ### Pull Request Checklist
@@ -166,25 +154,6 @@ If you have written a function that you think _"wow that is so great/useful
 I think others should have access to it"_ then this brilliant piece of code
 belongs in the src/ folder! Please see the toolkit heading for contributing
 this code.
-
-#### Production
-
-Eventually there will be a validation suite to check the input, interface
-and benchmarking of the production model.
-There will also be the facility to use Sphinx documentation
-to explain the model.
-
-The PR checklist:
-
-1) Correct naming convention
-2) Correct API (to be designed/built)
-3) dvc commands to run
-4) Reference to research in study-online-misogyny that support the proposed algorithm or to  sufficiently cited research papers
-
-
-#### Tool-kit
-
-Coming soon
 
 #### General
 
