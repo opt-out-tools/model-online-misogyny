@@ -148,11 +148,11 @@ When submitting a feature request, please try and:
 
 When submitting a bug report, please try and:
 
-- Include a short reproducible code snippet. If your snippet is longer than around
+- Include a short reproducible code snippet. If your snippet is longer than
 50 lines, please link to a gist or a Github repo. If you cannot include a
 reproducible snippet, please be specific about the models, data and functions
 involved in the bug.
-- If an exception is raised, please provide the full traceback.
-- Please include your operating system type and version number, as well as your
+- Provide the full traceback if an exception is raised.
+- Include your operating system type and version number, as well as your
 language version (python, javacript) and other important packages such as
 scikit-learn, numpy, and scipy.
