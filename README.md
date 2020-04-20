@@ -49,15 +49,15 @@ The following software is required to work with this repository:
     │                              Sphinx.
     ├── models                  <- Folder for saving trained and serialized models fit for production.
     ├── notebooks               <- Folder for saving Jupyter notebooks.
-    ├── reports                 <- Folder for saving data analysis in formats other than Jupyter (HTML, PDF, LaTeX,
-    │                              etc.).
+    ├── reports                 <- Folder for saving data analysis in formats other than Jupyter (HTML, PDF,
+    │                              LaTeX, etc.).
     ├── src                     <- Folder containing the source code to train models. The source code currently
     │   │                          runs preprocessing pipelines, error analysis scripts and acceptance criteria
     │   │                          scripts.
     │   └── text                <- Folder containing the utility modules for text processing in the pipeline.
     ├── stages                  <- Folder containing the files necessary to run the machine learning pipeline.
-    ├── tests                   <- Folder for saving tests for the machine learning pipeline to make sure that the
-    │                              source code works as expected.
+    ├── tests                   <- Folder for saving tests for the machine learning pipeline to make sure that
+    │                              the source code works as expected.
     ├── .flake8                 <- ???
     ├── .gitignore              <- List of the files not to add to this repository when committing to it.
     ├── .pre-commit-config.yaml <- ???
@@ -74,7 +74,7 @@ The following software is required to work with this repository:
 ## Repository management
 
 This repository is managed by the **Opt Out Tools** data team. If you have any question,
-please reach out to the following people on Github:
+please reach out to the following members of the team on Github:
 
 - Andrada: `andra-pumnea`
 - Matteo: `teoguso`
