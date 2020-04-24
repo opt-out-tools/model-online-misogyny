@@ -43,7 +43,7 @@ experimenting with machine learning algorithms.
     │                              Sphinx.
     ├── models                  <- Folder for saving trained and serialized models fit for production.
     ├── notebooks               <- Folder for saving Jupyter notebooks.
-    ├── reports                 <- Folder for saving data analysis in formats other than Jupyter (HTML, PDF,
+    ├── reports                 <- Folder for saving reports generated with Sphinx (HTML, PDF,
     │                              LaTeX, etc.).
     ├── src                     <- Folder containing the source code to train models. The source code currently
     │   │                          runs preprocessing pipelines, error analysis scripts and acceptance criteria
