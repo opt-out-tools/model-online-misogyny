@@ -220,8 +220,10 @@ Congratulations, you have contributed code to the **OOT** project!
 
 ## Submitting an issue
 
-We use Github issues to track all bugs and feature requests, feel free to [open](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
-one if you have found a bug or wish to request a feature.
+We use Github issues to track all bugs and feature requests, feel free to
+[open](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
+one if you have found a bug or wish to request a feature. **Please use one of the
+issue template provided in the [`.github`](./.github) folder in this repository.**
 
 Before submitting an issue, please do the following:
 
