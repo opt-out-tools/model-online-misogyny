@@ -73,7 +73,6 @@ please reach out to one of the following members of the team on Github:
 - Andrada: `andra-pumnea`
 - Matteo: `teoguso`
 - Verena: `Ver2307`
-- Adrin: `adrinjalali`
 
 ## Code of conduct
 

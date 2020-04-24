@@ -177,7 +177,7 @@ sections below.
 
 When submitting a feature request, please try and:
 
-- Be clear as possible.
+- Be as clear as possible.
 - Include relevant documentation, wireframes, etc.
 
 ### How to write a bug report
