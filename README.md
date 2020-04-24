@@ -13,7 +13,7 @@ A data statement of the dataset used for the first version of the model can be f
 on **OOT's** [website](https://www.optoutools.com/tech).
 
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) file in this repository to
-know how you contribute to it.
+know how you can contribute to it.
 
 Quick links:
 
