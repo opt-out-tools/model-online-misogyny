@@ -185,7 +185,7 @@ using the following naming convention for the branch:
 ```bash
 dvc repro
 ```
-For more information on how to use DVC, please see [USING_DVC.md](./.dvc).
+  For more information on how to use DVC, please see [USING_DVC.md](./.dvc).
 4. If the machine learning pipeline runs without any problem, document your code
 using [Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html). Make
 sure your documentation renders properly and save the generated reports in the
