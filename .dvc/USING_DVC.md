@@ -1,7 +1,7 @@
 # Using DVC
 
-The **OOT** data team is using DVC to track and manage the machine learning
-workflow. This file lists useful DVC commands.
+The **OOT** data team is using [DVC](https://dvc.org/) to track and manage the
+machine learning workflow. This file lists useful DVC commands.
 
 ## Check if the pipeline is up-to-date
 
@@ -20,7 +20,8 @@ dvc pipeline show --ascii
 ```
 The command visualizes the DVC files responsible for each stage and their mutual
 connection. The default (and final) stage is the evaluation stage, which is
-specified in `Dvcfile`. All other DVC files can be found in the `stages` folder.
+specified in `Dvcfile` at the root of the repository. All other DVC files can be
+found in the `stages` folder.
 
 ## Visualize metrics
 
