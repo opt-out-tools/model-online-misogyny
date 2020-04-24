@@ -12,39 +12,23 @@ in the [Firefox add-ons library](https://addons.mozilla.org/en-US/firefox/addon/
 A data statement of the dataset used for the first version of the model can be found
 on **OOT's** [website](https://www.optoutools.com/tech).
 
+Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) file in this repository to
+know how you contribute to it.
+
 Quick links:
 
-- [Purpose of the repository](#Purpose-of-the-repository)
-- [Software requirements](#Software-requirements)
+- [Repository purpose](#Repository-purpose)
 - [Repository structure](#Repository-structure)
 - [Repository management](#Repository-management)
 - [Code of conduct](#Code-of-conduct)
 
-## Purpose of the repository
+## Repository purpose
 
 This repository has two purposes:
 
 - Researching online misogyny, i.e. exploring hate speech datasets and
-experimenting machine-learning models.
-- Building a production model for the browser extension based on our research.
-
-## Software requirements
-
-### For research
-
-The following software is required to work with this repository:
-
-- [Jupyter Notebook](https://jupyter.org/install)
-
-### For modeling
-
-The following software is required to work with this repository:
-
-- [Python](https://www.python.org/downloads/)
-- [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
-- [pre-commit](https://pre-commit.com/#install)
-- [spaCy](https://spacy.io/usage)
-- [DVC](https://dvc.org/doc/install)
+experimenting with machine learning algorithms.
+- Building a machine learning model for the browser extension based on our research.
 
 ## Repository structure
 

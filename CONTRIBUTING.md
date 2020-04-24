@@ -4,11 +4,30 @@ The purpose of this guide is to help you contribute to this repository.
 
 Quick links:
 
+- [Software requirements](#Software-requirements)
 - [Setting up the repository](#Setting-up-the-repository)
 - [Finding an issue to work on](#Finding-an-issue-to-work-on)
 - [Working on a research issue](#Working-on-a-research-issue)
 - [Working on a modeling issue](#Working-on-a-modeling-issue)
 - [Submitting an issue](#Submitting-an-issue)
+
+## Software requirements
+
+### For research
+
+The following software is required to work with this repository:
+
+- [Jupyter Notebook](https://jupyter.org/install)
+
+### For modeling
+
+The following software is required to work with this repository:
+
+- [Python](https://www.python.org/downloads/)
+- [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+- [pre-commit](https://pre-commit.com/#install)
+- [spaCy](https://spacy.io/usage)
+- [DVC](https://dvc.org/doc/install)
 
 ## Setting up the repository
 
@@ -16,7 +35,7 @@ Quick links:
 
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure your local environment meets the [software requirements for research](./README.md#For-research).
+1. Make sure your local environment meets the [software requirements for research](#For-research).
 2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -28,7 +47,7 @@ Congratulations, you're all set!
 
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure your local environment meets the [software requirements for modeling](./README.md#For-modeling).
+1. Make sure your local environment meets the [software requirements for modeling](#For-modeling).
 2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
