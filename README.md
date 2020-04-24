@@ -63,7 +63,7 @@ experimenting with machine learning algorithms.
     ├── mypy.ini                <- ???
     ├── opt_out_logo.png        <- Logo used in the README of this repository.
     ├── requirements.txt        <- Requirements file for reproducing the analysis environment.
-    └── setup.py                <- Installation file for the source code.
+    └── setup.py                <- Configuration file for the source code.
 
 ## Repository management
 
