@@ -33,7 +33,8 @@ experimenting with machine learning algorithms.
 ## Repository structure
 
     ├── .circleci               <- Folder containing the CircleCI configuration file for this repository.
-    ├── .dvc                    <- Folder containing the DVC configuration file for this repository.
+    ├── .dvc                    <- Folder containing the DVC configuration file for this repository + an instruction
+    │                              file on how to use DVC.
     ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of issues for this
     │                              repository.
     ├── data                    <- Folder for documenting and analyzing datasets that tackle the problem of

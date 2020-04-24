@@ -144,8 +144,7 @@ baselines/benchmarks and acceptance criteria. The name of your notebook must
 contain the following: number (for ordering), your initials, short description,
 e.g. `01-jqp-initial-data-exploration`.
 3. In your local copy of the repository, create a branch using the following naming
-convention for the branch:
-*[naming convention missing]*
+convention for the branch: `research/<issue-number>-<descriptive_name>`
 4. Copy your notebook in the `notebooks` folder of the repository and push it to
 your branch.
 5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
@@ -186,7 +185,7 @@ using the following naming convention for the branch:
 ```bash
 dvc repro
 ```
-
+For more information on how to use DVC, please see [USING_DVC.md](./.dvc).
 4. If the machine learning pipeline runs without any problem, document your code
 using [Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html). Make
 sure your documentation renders properly and save the generated reports in the
