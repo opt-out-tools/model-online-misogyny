@@ -4,24 +4,31 @@ The purpose of this guide is to help you contribute to this repository.
 
 Quick links:
 
-- [Software requirements](#Software-requirements)
+- [Requirements](#Requirements)
 - [Setting up the repository](#Setting-up-the-repository)
 - [Finding an issue to work on](#Finding-an-issue-to-work-on)
 - [Working on a research issue](#Working-on-a-research-issue)
 - [Working on a modeling issue](#Working-on-a-modeling-issue)
 - [Submitting an issue](#Submitting-an-issue)
 
-## Software requirements
+## Requirements
 
-### For research
+### OOT dataset
 
-The following software is required to work with this repository:
+To work on any type of issue in this repository, you need the **OOT** dataset.
+
+Please follow the below instructions to request it:
+
+TBD
+
+
+### Software
+
+For research:
 
 - [Jupyter Notebook](https://jupyter.org/install)
 
-### For modeling
-
-The following software is required to work with this repository:
+For modeling:
 
 - [Python](https://www.python.org/downloads/)
 - [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
@@ -31,24 +38,26 @@ The following software is required to work with this repository:
 
 ## Setting up the repository
 
-## For research
+### For research
 
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure your local environment meets the [software requirements for research](#For-research).
-2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+1. Make sure you have requested the [**OOT** dataset](#OOT-dataset).
+2. Make sure your local environment meets the [software requirements for research](#Software).
+3. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 the forked repository on your local disk.
 
 Congratulations, you're all set!
 
-## For modeling
+### For modeling
 
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure your local environment meets the [software requirements for modeling](#For-modeling).
-2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+1. Make sure you have requested the [**OOT** dataset](#OOT-dataset).
+2. Make sure your local environment meets the [software requirements for modeling](#Software).
+3. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 the forked repository on your local disk.
@@ -101,41 +110,8 @@ working on the issue.
 
 ## Working on a research issue
 
-### Dataset research
-
 Please follow the below steps if your issue is about researching and/or
-analyzing a dataset:
-
-1. In your local copy of the repository, create a branch to take care of the issue
-using the following naming convention for the branch:
-*[naming convention missing]*
-2. Work in your branch in the `data` folder until you have finished your research
-and properly documented it.
-3. Once you have finished your research and pushed everything to your branch, submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
-Make sure to:
-  - Prefix your PR with an `[MRG]` label and give it a helpful title that summarizes
-    what your contribution does. If you expect to do more work on your PR before
-    receiving a full review, prefix it with a `[WIP]` label and change it to `[MRG]`
-    when it matures.
-  - Reference the issue the PR addresses in the description of the PR.
-  - Assign one or several reviewers to your PR. If you do not know anyone in the
-    data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
-4. Answer and address any comment reviewers add to your PR.
-5. Once your PR is approved by a reviewer and has passed all CI checks, the
-reviewer or an admin of the repo merges it to the current release.
-
-**NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
-[keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)
-to close them at the same time (e.g., "Fixes #1234"; multiple issues/PRs are
-allowed as long as each one is preceded by a keyword). If your PR is simply
-related to some other issues/PRs, create a link to them without using the
-keywords (e.g., "See also #1234").
-
-Congratulations, you have contributed dataset research to the **OOT** project!
-
-### Algorithm research
-
-Please follow the below steps if your issue is about experimenting an algorithm:
+analyzing a dataset or experimenting an algorithm:
 
 1. Carry out your research on your machine using [JupyterLab](https://jupyter.org/).
 2. Once you have finished your research, produce a notebook that clearly
