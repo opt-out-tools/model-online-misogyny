@@ -156,7 +156,7 @@ etc.) or fixing a code bug:
 1. In your local copy of the repository, create a branch to take care of the issue
 using the following naming convention for the branch:
   - For feature implementations/enhancements: `feature/<issue-number>-<descriptive_name>`
-  - For bug fixes: `fix/<descriptive_name>`
+  - For bug fixes: `fix/<issue-number>-<descriptive_name>`
 2. Work in your branch in the `src` folder until you are satisfied with your code.
 3. Once you're satisfied with your code, run the machine learning pipeline with the following command:
 
