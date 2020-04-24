@@ -26,7 +26,7 @@ Quick links:
 
 This repository has two purposes:
 
-- Researching online misogyny, i.e. exploring hate speech datasets and
+- Researching online misogyny automatic detection, i.e. exploring hate speech datasets and
 experimenting with machine learning algorithms.
 - Building a machine learning model for the browser extension based on our research.
 
