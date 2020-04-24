@@ -145,7 +145,7 @@ allowed as long as each one is preceded by a keyword). If your PR is simply
 related to some other issues/PRs, create a link to them without using the
 keywords (e.g., "See also #1234").
 
-Congratulations, you have contributed algorithm research to the **OOT** project!
+Congratulations, you have contributed research to the **OOT** project!
 
 ## Working on a modeling issue
 
