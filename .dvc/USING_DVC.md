@@ -36,6 +36,7 @@ To get a quick comparison with all other experiments in the repo, run:
 ```bash
 dvc metrics show -a
 ```
+For more info on comparing experiments see [https://dvc.org/doc/tutorials/deep/reproducibility](https://dvc.org/doc/tutorials/deep/reproducibility.).
 
 ## Modify the pipeline
 
