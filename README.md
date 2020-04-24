@@ -37,9 +37,8 @@ experimenting with machine learning algorithms.
     │                              file on how to use DVC.
     ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of issues for this
     │                              repository.
-    ├── data                    <- Folder for documenting and analyzing datasets that tackle the problem of
-    │                              misogyny/hate speech and their labeling process, and
-    │                              instructions on how to request them (if applicable).
+    ├── data                    <- Folder for documenting datasets that tackle the problem of
+    │                              misogyny/hate speech and their labeling process.
     ├── docs                    <- Folder containing the files necessary to produce documentation with
     │                              Sphinx.
     ├── models                  <- Folder for saving trained and serialized models fit for production.
