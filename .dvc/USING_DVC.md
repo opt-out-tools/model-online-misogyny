@@ -44,7 +44,7 @@ For more info on comparing experiments see [https://dvc.org/doc/tutorials/deep/r
 A generic modification of the pipeline should focus on the Python source code in the
 `src` folder, most notably `featurize.py` or `train.py`.
 
-To have a closer look at the pipeline setup, investigate the DVC files in the `stages` folder or run:
+To have a closer look at the pipeline setup, read the DVC files in the `stages` folder or run:
 
 ```bash
 dvc pipeline show --ascii -c stages/train.py
