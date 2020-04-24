@@ -103,25 +103,78 @@ working on the issue.
 
 ### Dataset research
 
+Please follow the below steps if your issue is about researching and/or
+analyzing a dataset:
+
+1. In your local copy of the repository, create a branch to take care of the issue
+using the following naming convention for the branch:
+*[naming convention missing]*
+2. Work in your branch in the `data` folder until you have finished your research
+and properly documented it.
+3. Once you have finished your research and pushed everything to your branch, submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
+Make sure to:
+  - Prefix your PR with an `[MRG]` label and give it a helpful title that summarizes
+    what your contribution does. If you expect to do more work on your PR before
+    receiving a full review, prefix it with a `[WIP]` label and change it to `[MRG]`
+    when it matures.
+  - Reference the issue the PR addresses in the description of the PR.
+  - Assign one or several reviewers to your PR. If you do not know anyone in the
+    data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
+4. Answer and address any comment reviewers add to your PR.
+5. Once your PR is approved by a reviewer and has passed all CI checks, the
+reviewer or an admin of the repo merges it to the current release.
+
+**NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
+[keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)
+to close them at the same time (e.g., "Fixes #1234"; multiple issues/PRs are
+allowed as long as each one is preceded by a keyword). If your PR is simply
+related to some other issues/PRs, create a link to them without using the
+keywords (e.g., "See also #1234").
+
+Congratulations, you have contributed dataset research to the **OOT** project!
+
 ### Algorithm research
 
-<!-- The PR checklist:
+Please follow the below steps if your issue is about experimenting an algorithm:
 
-1) Correct naming convention of branch/notebooks/scripts
-2) Sufficiently novel to be merged, otherwise will stay on branch
-3) Notebook is in correct folder
-4) Clear illustration of results: comparison to baselines/benchmarks and acceptance criteria
+1. Carry out your research on your machine using [JupyterLab](https://jupyter.org/).
+2. Once you have finished your research, produce a notebook that clearly
+illustrates the results of your research with a comparison to
+baselines/benchmarks and acceptance criteria. Your notebook must be named as
+follows:
+*[naming convention missing]*
+3. In your local copy of the repository, create a branch using the following naming
+convention for the branch:
+*[naming convention missing]*
+4. Copy your notebook in the `notebooks` folder of the repository and push it to
+your branch.
+5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
+Make sure to:
+  - Prefix your PR with an `[MRG]` label and give it a helpful title that summarizes
+    what your contribution does. If you expect to do more work on your PR before
+    receiving a full review, prefix it with a `[WIP]` label and change it to `[MRG]`
+    when it matures.
+  - Reference the issue the PR addresses in the description of the PR.
+  - Assign one or several reviewers to your PR. If you do not know anyone in the
+    data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
+4. Answer and address any comment reviewers add to your PR.
+5. Once your PR is approved by a reviewer and has passed all CI checks, the
+reviewer or an admin of the repo merges it to the current release.
 
+**NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
+[keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)
+to close them at the same time (e.g., "Fixes #1234"; multiple issues/PRs are
+allowed as long as each one is preceded by a keyword). If your PR is simply
+related to some other issues/PRs, create a link to them without using the
+keywords (e.g., "See also #1234").
 
-If you have written a function that you think _"wow that is so great/useful
-I think others should have access to it"_ then this brilliant piece of code
-belongs in the src/ folder! Please see the toolkit heading for contributing
-this code.-->
-
+Congratulations, you have contributed algorithm research to the **OOT** project!
 
 ## Working on a modeling issue
 
-Please follow the below steps if your issue is code-related:
+Please follow the below steps if your issue is about implementing or enhancing a
+code feature (e.g. new algorithm, algorithm enhancement, pipeline workflow enhancement,
+etc.) or fixing a code bug:
 
 1. In your local copy of the repository, create a branch to take care of the issue
 using the following naming convention for the branch:
