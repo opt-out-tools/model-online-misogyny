@@ -7,15 +7,28 @@ Quick links:
 - [Setting up the repository](#Setting-up-the-repository)
 - [Finding an issue to work on](#Finding-an-issue-to-work-on)
 - [Working on a research issue](#Working-on-a-research-issue)
-- [Working on a code issue](#Working-on-a-code-issue)
+- [Working on a modeling issue](#Working-on-a-modeling-issue)
 - [Submitting an issue](#Submitting-an-issue)
 
 ## Setting up the repository
 
+## For research
+
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure your local environment meets the [software requirements](./README.md#Software-requirements)
-for working with this repository.
+1. Make sure your local environment meets the [software requirements for research](./README.md#For-research).
+2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+the repository and
+[clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+the forked repository on your local disk.
+
+Congratulations, you're all set!
+
+## For modeling
+
+Please follow the below steps to set up the repository on your local disk:
+
+1. Make sure your local environment meets the [software requirements for modeling](./README.md#For-modeling).
 2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -23,13 +36,13 @@ the forked repository on your local disk.
 4. In your terminal, use the following command to create a new Conda environment:
 
 ```bash
-conda create -n som python=3.7
+conda create -n <name_for_your_environment> python=3.7
 ```
 
 5. Activate the environment using the following command:
 
 ```bash
-conda activate som
+conda activate <name_for_your_environment>
 ```
 
 6. At the root of the repository, install the dependencies with the below command:
@@ -87,7 +100,7 @@ belongs in the src/ folder! Please see the toolkit heading for contributing
 this code.-->
 
 
-## Working on a code issue
+## Working on a modeling issue
 
 Please follow the below steps if your issue is code-related:
 
@@ -104,7 +117,8 @@ dvc repro
 
 4. If the machine learning pipeline runs without any problem, document your code
 in the `docs` folder of this repository and make sure the documentation renders properly.
-5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue. Make sure to:
+5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
+Make sure to:
   - Prefix your PR with an `[MRG]` label and give it a helpful title that summarizes
     what your contribution does. If you expect to do more work on your PR before
     receiving a full review, prefix it with a `[WIP]` label and change it to `[MRG]`
@@ -116,8 +130,8 @@ in the `docs` folder of this repository and make sure the documentation renders 
   - Assign one or several reviewers to your PR. If you do not know anyone in the
     data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
 6. Answer and address any comment reviewers add to your PR.
-7. Once your PR is approved by a reviewer and has passed all CI checks, **merge it
-to the current release branch, not to `master`**.
+7. Once your PR is approved by a reviewer and has passed all CI checks, the
+reviewer or an admin of the repo merges it to the current release.
 
 **NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
 [keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)

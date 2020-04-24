@@ -3,10 +3,14 @@
 # Opt Out Tools Machine Learning R&D Repository
 
 Welcome to the **Opt Out Tools (OOT)** Machine Learning R&D repository. This
-repository contains the research and production code allowing us to build the
-model used by the **Opt Out** [browser extension](https://github.com/opt-out-tools/opt-out).
-The extension is currently in its alpha version and available for download in the
-[Firefox add-ons library](https://addons.mozilla.org/en-US/firefox/addon/opt-out-tools/).
+repository contains the research and the production code allowing us to build a
+machine learning model for the automatic detection of online misogyny on Twitter.
+
+A first version of this model is currently in use in the **Opt Out** [browser extension](https://github.com/opt-out-tools/opt-out).
+The extension is currently itself in its alpha version and available for download
+in the [Firefox add-ons library](https://addons.mozilla.org/en-US/firefox/addon/opt-out-tools/).
+A data statement of the dataset used for the first version of the model can be found
+on **OOT's** [website](https://www.optoutools.com/tech).
 
 Quick links:
 
@@ -18,22 +22,28 @@ Quick links:
 
 ## Purpose of the repository
 
-There are three purposes of this repository:
+This repository has two purposes:
 
-- Researching online misogyny
-- Building a production model for the browser extension based on our research
-- Developing a toolkit for identifying online misogyny (long-term)
+- Researching online misogyny, i.e. exploring hate speech datasets and
+experimenting machine-learning models.
+- Building a production model for the browser extension based on our research.
 
 ## Software requirements
+
+### For research
+
+The following software is required to work with this repository:
+
+- [Jupyter Notebook](https://jupyter.org/install)
+
+### For modeling
 
 The following software is required to work with this repository:
 
 - [Python](https://www.python.org/downloads/)
-- [pip](https://pypi.org/project/pip/)
 - [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 - [pre-commit](https://pre-commit.com/#install)
 - [spaCy](https://spacy.io/usage)
-- [Jupyter Notebook](https://jupyter.org/install)
 - [DVC](https://dvc.org/doc/install)
 
 ## Repository structure
@@ -74,10 +84,12 @@ The following software is required to work with this repository:
 ## Repository management
 
 This repository is managed by the **Opt Out Tools** data team. If you have any question,
-please reach out to the following members of the team on Github:
+please reach out to one of the following members of the team on Github:
 
 - Andrada: `andra-pumnea`
 - Matteo: `teoguso`
+- Verena: `Ver2307`
+- Adrin: `adrinjalali`
 
 ## Code of conduct
 
