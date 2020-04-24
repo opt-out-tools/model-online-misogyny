@@ -140,9 +140,9 @@ Please follow the below steps if your issue is about experimenting an algorithm:
 1. Carry out your research on your machine using [JupyterLab](https://jupyter.org/).
 2. Once you have finished your research, produce a notebook that clearly
 illustrates the results of your research with a comparison to
-baselines/benchmarks and acceptance criteria. Your notebook must be named as
-follows:
-*[naming convention missing]*
+baselines/benchmarks and acceptance criteria. The name of your notebook must
+contain the following: number (for ordering), your initials, short description,
+e.g. `01-jqp-initial-data-exploration`.
 3. In your local copy of the repository, create a branch using the following naming
 convention for the branch:
 *[naming convention missing]*

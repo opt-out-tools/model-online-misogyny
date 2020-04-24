@@ -57,7 +57,7 @@ experimenting with machine learning algorithms.
     ├── .pre-commit-config.yaml <- ???
     ├── .pylintrc               <- ???
     ├── CONTRIBUTING.md         <- Instructions on how to contribute to this repository.
-    ├── Dvcfile                 <- ???
+    ├── Dvcfile                 <- Default stage (i.e evaluation stage) for the machine learning pipeline.
     ├── LICENSE                 <- Folder containing the license for use of this repository.
     ├── README.md               <- General information about this repository.
     ├── mypy.ini                <- ???
