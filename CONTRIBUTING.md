@@ -42,13 +42,13 @@ For modeling:
 
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure you have requested the [**OOT** dataset](#OOT-dataset).
-2. Make sure your local environment meets the [software requirements for research](#Software).
-3. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+1. Make sure you have requested the [**OOT** dataset](#OOT-dataset) and that your
+local environment meets the [software requirements for research](#Software).
+2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 the forked repository on your local disk.
-4. Copy the **OOT** dataset in the `data` folder of the repository.
+3. Copy the **OOT** dataset in the `data` folder of the repository.
 
 Congratulations, you're all set!
 
@@ -56,32 +56,32 @@ Congratulations, you're all set!
 
 Please follow the below steps to set up the repository on your local disk:
 
-1. Make sure you have requested the [**OOT** dataset](#OOT-dataset).
-2. Make sure your local environment meets the [software requirements for modeling](#Software).
-3. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+1. Make sure you have requested the [**OOT** dataset](#OOT-dataset) and that your
+local environment meets the [software requirements for modeling](#Software).
+2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 the forked repository on your local disk.
-5. Copy the **OOT** dataset in the `data` folder of the repository.
-6. In your terminal, use the following command to create a new Conda environment:
+3. Copy the **OOT** dataset in the `data` folder of the repository.
+4. In your terminal, use the following command to create a new Conda environment:
 
 ```bash
 conda create -n <name_for_your_environment> python=3.7
 ```
 
-7. Activate the environment using the following command:
+5. Activate the environment using the following command:
 
 ```bash
 conda activate <name_for_your_environment>
 ```
 
-8. At the root of the repository, install the dependencies with the below command:
+6. At the root of the repository, install the dependencies with the below command:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-9. Download the spaCy language model needed for our machine learning pipeline with the following command:
+7. Download the spaCy language model needed for our machine learning pipeline with the following command:
 
 ```bash
 python -m spacy download en_core_web_md
