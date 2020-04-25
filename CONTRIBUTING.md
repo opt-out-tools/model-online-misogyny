@@ -165,11 +165,18 @@ dvc repro
 ```
 For more information on how to use DVC, please see [USING_DVC.md](./.dvc).
 
-4. If the machine learning pipeline runs without any problem, document your code
+4. Run the tests to check your code works with the machine learning pipeline using
+this command:
+
+```bash
+python -m pytest
+```
+
+5. If the machine learning pipeline and the tests run without any problem, document your code
 using [Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html). Make
 sure your documentation renders properly and save the generated reports in the
 `reports` folder of this repo.
-5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
+6. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
 Make sure to:
   - Prefix your PR with an `[MRG]` label and give it a helpful title that summarizes
     what your contribution does. If you expect to do more work on your PR before
@@ -183,8 +190,8 @@ Make sure to:
       - Your code documentation saved in the `reports` folder of this repository.
   - Assign one or several reviewers to your PR. If you do not know anyone in the
     data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
-6. Answer and address any comment reviewers add to your PR.
-7. Once your PR is approved by a reviewer and has passed all CI checks, the
+7. Answer and address any comment reviewers add to your PR.
+8. Once your PR is approved by a reviewer and has passed all CI checks, the
 reviewer or an admin of the repo merges it to the current release.
 
 **NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
