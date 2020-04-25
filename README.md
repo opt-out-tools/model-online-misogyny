@@ -20,6 +20,7 @@ Quick links:
 - [Repository purpose](#Repository-purpose)
 - [Repository structure](#Repository-structure)
 - [Repository management](#Repository-management)
+- [Repository status](#Repository-status)
 - [Code of conduct](#Code-of-conduct)
 
 ## Repository purpose
@@ -73,6 +74,13 @@ please reach out to one of the following members of the team on Github:
 - Andrada: `andra-pumnea`
 - Matteo: `teoguso`
 - Verena: `Ver2307`
+
+## Repository status
+
+We use [CircleCI](https://circleci.com/) for CI/CD. You can always check the
+current status of this repository in this section.
+
+Current status: [![CircleCI](https://circleci.com/gh/opt-out-tools/model-online-misogyny.svg?style=svg)](https://circleci.com/gh/opt-out-tools/model-online-misogyny)
 
 ## Code of conduct
 
