@@ -77,10 +77,12 @@ please reach out to one of the following members of the team on Github:
 
 ## Repository status
 
-We use [CircleCI](https://circleci.com/) for CI/CD. You can always check the
-current status of this repository in this section.
+We use [CircleCI](https://circleci.com/) for [CI/CD](https://en.wikipedia.org/wiki/CI/CD).
+You can always check if anything is broken in the repository in this section.
 
 Current status: [![CircleCI](https://circleci.com/gh/opt-out-tools/model-online-misogyny.svg?style=svg)](https://circleci.com/gh/opt-out-tools/model-online-misogyny)
+
+**NOTE: We do not currently have an automated model deployment mechanism.**
 
 ## Code of conduct
 
