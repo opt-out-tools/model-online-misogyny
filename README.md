@@ -38,8 +38,8 @@ experimenting with machine learning algorithms.
     │                              instructions on how to use DVC.
     ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of issues for this
     │                              repository.
-    ├── data                    <- Folder for documenting datasets that tackle the problem of
-    │                              misogyny/hate speech and their labeling process.
+    ├── data                    <- Folder for copying the OOT dataset and for documenting other datasets that  
+    │                              tackle the problem of misogyny/hate speech and their labeling process.
     ├── docs                    <- Folder containing the files necessary to produce documentation with
     │                              Sphinx.
     ├── models                  <- Folder for saving trained and serialized models fit for production.
@@ -53,15 +53,15 @@ experimenting with machine learning algorithms.
     ├── stages                  <- Folder containing the files necessary to run the machine learning pipeline.
     ├── tests                   <- Folder for saving tests for the machine learning pipeline to make sure that
     │                              the source code works as expected.
-    ├── .flake8                 <- ???
+    ├── .flake8                 <- Linter file necessary to format code to the OOT standards.
     ├── .gitignore              <- List of the files not to add to this repository when committing to it.
-    ├── .pre-commit-config.yaml <- ???
-    ├── .pylintrc               <- ???
+    ├── .pre-commit-config.yaml <- List of the scripts run at the pre-commit stage.
+    ├── .pylintrc               <- Linter file necessary to format code to the OOT standards.
     ├── CONTRIBUTING.md         <- Instructions on how to contribute to this repository.
     ├── Dvcfile                 <- Default stage (i.e evaluation stage) for the machine learning pipeline.
     ├── LICENSE                 <- Folder containing the license for use of this repository.
     ├── README.md               <- General information about this repository.
-    ├── mypy.ini                <- ???
+    ├── mypy.ini                <- File necessary to allow types in Python
     ├── opt_out_logo.png        <- Logo used in the README of this repository.
     ├── requirements.txt        <- Requirements file for reproducing the analysis environment.
     └── setup.py                <- Configuration file for the source code.
