@@ -48,7 +48,13 @@ local environment meets the [software requirements for research](#Software).
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 the forked repository on your local disk.
-3. Copy the **OOT** dataset in the `data` folder of the repository.
+3. In your terminal, run the following command to set up the pre-commit scripts:
+
+```bash
+pre-commit install
+```
+
+4. Copy the **OOT** dataset in the `data` folder of the repository.
 
 Congratulations, you're all set!
 
@@ -62,26 +68,32 @@ local environment meets the [software requirements for modeling](#Software).
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 the forked repository on your local disk.
-3. Copy the **OOT** dataset in the `data` folder of the repository.
-4. In your terminal, use the following command to create a new Conda environment:
+3. In your terminal, run the following command to set up the pre-commit scripts:
+
+```bash
+pre-commit install
+```
+
+4. Copy the **OOT** dataset in the `data` folder of the repository.
+5. In your terminal, use the following command to create a new Conda environment:
 
 ```bash
 conda create -n <name_for_your_environment> python=3.7
 ```
 
-5. Activate the environment using the following command:
+6. Activate the environment using the following command:
 
 ```bash
 conda activate <name_for_your_environment>
 ```
 
-6. At the root of the repository, install the dependencies with the below command:
+7. At the root of the repository, install the dependencies with the below command:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-7. Download the spaCy language model needed for our machine learning pipeline with the following command:
+8. Download the spaCy language model needed for our machine learning pipeline with the following command:
 
 ```bash
 python -m spacy download en_core_web_md
