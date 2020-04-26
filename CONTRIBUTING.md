@@ -48,13 +48,7 @@ local environment meets the [software requirements for research](#Software).
 the repository and
 [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 the forked repository on your local disk.
-3. In your terminal, run the following command to set up the pre-commit scripts:
-
-```bash
-pre-commit install
-```
-
-4. Copy the **OOT** dataset in the `data` folder of the repository.
+3. Copy the **OOT** dataset in the `data` folder of the repository.
 
 Congratulations, you're all set!
 
