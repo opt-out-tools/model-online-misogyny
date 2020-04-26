@@ -19,8 +19,7 @@ To work on any type of issue in this repository, you need the **OOT** dataset.
 
 Please follow the below instructions to request it:
 
-TBD
-
+*TBD*
 
 ### Software
 
