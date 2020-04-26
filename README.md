@@ -61,7 +61,7 @@ experimenting with machine learning algorithms.
     ├── Dvcfile                 <- Default stage (i.e evaluation stage) for the machine learning pipeline.
     ├── LICENSE                 <- Folder containing the license for use of this repository.
     ├── README.md               <- General information about this repository.
-    ├── mypy.ini                <- File necessary to allow types in Python
+    ├── mypy.ini                <- File necessary to allow types in Python.
     ├── opt_out_logo.png        <- Logo used in the README of this repository.
     ├── requirements.txt        <- Requirements file for reproducing the analysis environment.
     └── setup.py                <- Configuration file for the source code.
