@@ -1,274 +1,243 @@
 # Contributor's Guide
 
-The purpose of this guide is to help you contribute to Opt Out Tools modeling,
-regardless of your skill level or amount of time you are able to contribute.
+The purpose of this guide is to help you contribute to this repository.
 
 Quick links:
 
-- [How much time do you have?](#How-much-time-do-you-have?)
-- [Project Management](#Project-Management)
-- [Feature Request/Bug Report](#Feature-Request/Bug-Report)
-- [Contributing Code](#Feature-Implementation---Contributing-Code)
-- [Non Code Contributions](#Non-Code-Contributions)
-- [Code of Conduct](#Code-of-Conduct)
+- [Requirements](#Requirements)
+- [Setting up the repository](#Setting-up-the-repository)
+- [Finding an issue to work on](#Finding-an-issue-to-work-on)
+- [Working on a research issue](#Working-on-a-research-issue)
+- [Working on a modeling issue](#Working-on-a-modeling-issue)
+- [Submitting an issue](#Submitting-an-issue)
 
-## How much time do you have?
+## Requirements
 
-### Less 10 minutes
+### OOT dataset
 
-- Look at our notebooks & talk to a friend about online misogyny and what Opt
-  Out Tools
-- Protest online about the abuse female-identifying people are receiving
-- Talk to us on slack about bright ideas you have for new/better
-  functionality (to get an invite reach out at @OptOutSocial)
+To work on any type of issue in this repository, you need the **OOT** dataset.
 
-### Less 30 minutes
+Please follow the below instructions to request it:
 
-- Look through the open issues for a problem that is small and sweet to fix
-- Post/tell lots of people about the issue and about Opt Out Tools!
-  Use our Twitter handle @OptOutSocial
+*TBD*
 
-### Programming (1+ hours)
+### Software
 
-Take a look through the open issues and then check with pull requests to make
-sure that someone isn't already working on it. Please post in an issue to say
-that you're working on it.
+For research:
 
-If you are making a substantial or potentially controversial change, your
-first port of call should be to stop by and chat to us on Slack or file an
-issue to discuss what you would like to change. We really don't want you to
-waste time on a pull request (GitHub jargon for a contribution) that has no
-chance of being merged.
+- [Jupyter Notebook](https://jupyter.org/install)
 
-If you have no tests, your code won't be merged. We're aiming for 100% test
-coverage.
+For modeling:
 
-## Project Management
+- [Python](https://www.python.org/downloads/)
+- [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+- [pre-commit](https://pre-commit.com/#install)
+- [spaCy](https://spacy.io/usage)
+- [DVC](https://dvc.org/doc/install)
 
-We use the Github projects board to organise our work on the organization
-page. For a high-level overview of our modeling strategy please see the
-[Modeling Roadmap](https://github.com/orgs/opt-out-tools/projects/41). For
-more specific projects, please check the
-[organization's projects list](https://github.com/orgs/opt-out-tools/projects).
+## Setting up the repository
 
-We use Github issues to create, discuss or carry out work. Each issue can take
-one of three forms, a either a bug, a feature request or feature
-implementation (task).
+### For research
 
-- Bug: a problem with the code that needs fixing
-- Feature request: an idea for new features
-- Feature implementation: concrete steps to be completed to add
-  the feature/fix the bug
+Please follow the below steps to set up the repository on your local disk:
 
-Bug and feature requests become feature implementations when someone has a
-brainwave of how to complete the task.
-Thus a feature implementation issue
-will contain clear instructions of how to complete task.
+1. Make sure you have requested the [**OOT** dataset](#OOT-dataset) and that your
+local environment meets the [software requirements for research](#Software).
+2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+the repository and
+[clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+the forked repository on your local disk.
+3. Copy the **OOT** dataset in the `data` folder of the repository.
 
-Each issue should be labeled with a minimum of two labels, one to indicate
-priority and the second to indicate size of task.
-It should also belong to a milestone.
-We have four milestones over the next months, which look like this:
+Congratulations, you're all set!
 
-Milestone name and description:
+### For modeling
 
-- 0.1: the minimum viable product (MVP), the minimum
-   functionality our tool/s can have to be ready
-- 0.2: what is then expected by the end user for the tool/s to have
-- 0.3: what features would be good to have in the tool/s
-- 0.4: the future of our tool/s
+Please follow the below steps to set up the repository on your local disk:
 
-Concrete details of what each milestone contains can be found
-in the tool's roadmap.
-For example, to see what we want to achieve in terms of Activism
-by the 0.1 milestone, see the
-[Activism Roadmap](https://github.com/orgs/opt-out-tools/projects/37)
+1. Make sure you have requested the [**OOT** dataset](#OOT-dataset) and that your
+local environment meets the [software requirements for modeling](#Software).
+2. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+the repository and
+[clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+the forked repository on your local disk.
+3. In your terminal, run the following command to set up the pre-commit scripts:
 
-To find out what tools we have, please see
-[Our Tools and Our Vision](https://github.com/opt-out-tools/start-here#Our-Tools-and-Our-Vision).
-An overview of tasks for each milestone can be found
-[here](https://github.com/opt-out-tools/start-her#Tools-Roadmap).
+```bash
+pre-commit install
+```
 
-Each issue should belong to a step in the roadmap which will then be sorted
-into a project.
+4. Copy the **OOT** dataset in the `data` folder of the repository.
+5. In your terminal, use the following command to create a new Conda environment:
 
-Issues may have two kinds of squared bracket labels in the title:
+```bash
+conda create -n <name_for_your_environment> python=3.7
+```
 
-- [WIP]: indicate you are working on something to avoid duplicated work,
-request broad review of functionality or API, or seek collaborators (use the
-help wanted label).
-- [MRG]: the contribution is complete and should be subjected to a detailed
-review
+6. Activate the environment using the following command:
 
-## Feature Request/Bug Report
+```bash
+conda activate <name_for_your_environment>
+```
 
-We use GitHub issues to track all bugs and feature requests;
-feel free to open an issue if you have found a bug
-or wish to request a feature.
+7. At the root of the repository, install the dependencies with the below command:
 
-In case you experience issues using any repo, do not hesitate
-to submit a ticket to the Bug Tracker of the relevant repo.
-You are also welcome to post feature requests or pull requests.
+```bash
+pip install -r requirements.txt
+```
 
-It is recommended to check that your issue complies with
-the following rules before submitting:
+8. Download the spaCy language model needed for our machine learning pipeline with the following command:
+
+```bash
+python -m spacy download en_core_web_md
+```
+
+Congratulations, you're all set!
+
+## Finding an issue to work on
+
+You can find issues to work on in the following places:
+
+- [Data team project board](https://github.com/orgs/opt-out-tools/projects/41)
+- [Repository Issues tab](https://github.com/opt-out-tools/model-online-misogyny/issues)
+
+When choosing an issue to work on:
+
+- If the issue is unassigned, comment on the issue that you would like to take
+care of it and someone in the data team will assign you.
+- If the issue is already assigned to someone, contact that person on Slack or
+Github to see how you can work with them.
+
+Once you are assigned on an issue:
+
+- Make sure to check all comments on the issue before starting to work.
+- **Ask for clarification from the person who created the issue if needed.**
+- Make sure to add a `[WIP]` label in the issue title once you start actively
+working on the issue.
+
+## Working on a research issue
+
+Please follow the below steps if your issue is about researching and/or
+analyzing a dataset or experimenting an algorithm:
+
+1. Carry out your research on your machine using [JupyterLab](https://jupyter.org/).
+2. Once you have finished your research, produce a notebook that clearly
+illustrates the results of your research with a comparison to
+baselines/benchmarks and acceptance criteria. The name of your notebook must
+contain the following: number (for ordering), your initials, short description,
+e.g. `01-jqp-initial-data-exploration`.
+3. In your local copy of the repository, create a branch using the following naming
+convention for the branch: `research/<issue-number>-<descriptive_name>`
+4. Copy your notebook in the `notebooks` folder of the repository and push it to
+your branch.
+5. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
+Make sure to:
+  - Prefix your PR with an `[MRG]` label and give it a helpful title that summarizes
+    what your contribution does. If you expect to do more work on your PR before
+    receiving a full review, prefix it with a `[WIP]` label and change it to `[MRG]`
+    when it matures.
+  - Reference the issue the PR addresses in the description of the PR.
+  - Assign one or several reviewers to your PR. If you do not know anyone in the
+    data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
+4. Answer and address any comment reviewers add to your PR.
+5. Once your PR is approved by a reviewer and has passed all CI checks, the
+reviewer or an admin of the repo merges it to the current release.
+
+**NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
+[keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)
+to close them at the same time (e.g., "Fixes #1234"; multiple issues/PRs are
+allowed as long as each one is preceded by a keyword). If your PR is simply
+related to some other issues/PRs, create a link to them without using the
+keywords (e.g., "See also #1234").
+
+Congratulations, you have contributed research to the **OOT** project!
+
+## Working on a modeling issue
+
+Please follow the below steps if your issue is about implementing or enhancing a
+code feature (e.g. new algorithm, algorithm enhancement, pipeline workflow enhancement,
+etc.) or fixing a code bug:
+
+1. In your local copy of the repository, create a branch to take care of the issue
+using the following naming convention for the branch:
+  - For feature implementations/enhancements: `feature/<issue-number>-<descriptive_name>`
+  - For bug fixes: `fix/<issue-number>-<descriptive_name>`
+2. Work in your branch in the `src` folder until you are satisfied with your code.
+3. Once you're satisfied with your code, run the machine learning pipeline with the following command:
+
+```bash
+dvc repro
+```
+For more information on how to use DVC, please see [USING_DVC.md](./.dvc).
+
+4. Run the tests to check your code works with the machine learning pipeline using
+this command:
+
+```bash
+python -m pytest
+```
+
+5. If the machine learning pipeline and the tests run without any problem, document your code
+using [Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html). Make
+sure your documentation renders properly and save the generated reports in the
+`reports` folder of this repo.
+6. Submit a [pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your issue.
+Make sure to:
+  - Prefix your PR with an `[MRG]` label and give it a helpful title that summarizes
+    what your contribution does. If you expect to do more work on your PR before
+    receiving a full review, prefix it with a `[WIP]` label and change it to `[MRG]`
+    when it matures.
+  - In the description of the PR, reference:
+      - The issue the PR addresses.
+      - Your own research saved in the `notebooks` folder of this
+        repository or sufficiently cited research papers to support the proposed
+        algorithm.
+      - Your code documentation saved in the `reports` folder of this repository.
+  - Assign one or several reviewers to your PR. If you do not know anyone in the
+    data team, please assign one of the people listed in [Repository management](./README.md#Repository-management).
+7. Answer and address any comment reviewers add to your PR.
+8. Once your PR is approved by a reviewer and has passed all CI checks, the
+reviewer or an admin of the repo merges it to the current release.
+
+**NOTE:** If merging your PR means that some other issues/PRs should be closed, please use
+[keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)
+to close them at the same time (e.g., "Fixes #1234"; multiple issues/PRs are
+allowed as long as each one is preceded by a keyword). If your PR is simply
+related to some other issues/PRs, create a link to them without using the
+keywords (e.g., "See also #1234").
+
+Congratulations, you have contributed code to the **OOT** project!
+
+## Submitting an issue
+
+We use Github issues to track all bugs and feature requests, feel free to
+[open](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
+one if you have found a bug or wish to request a feature. **Please use one of the
+issue template provided in the [`.github`](./.github) folder in this repository.**
+
+Before submitting an issue, please do the following:
 
 - Verify that your issue is not being currently addressed by
-  other issues or pull requests.
+other issues or pull requests.
+- Read the instructions on how to write a feature request or a bug report in the
+sections below.
 
-- If you are submitting a bug report, we strongly encourage you
-  to follow the guidelines in the _How to write a good Bug Report_ section.
-
-### How to write a good Bug Report
-
-When you submit an issue to Github, please do your best
-to follow these guidelines!
-This will make it a lot easier to provide you with good feedback:
-
-1. The ideal bug report contains a short reproducible code snippet,
-   this way anyone can try to reproduce the bug easily
-   (see this for more details).
-   If your snippet is longer than around 50 lines,
-   please link to a gist or a github repo.
-
-1. If not feasible to include a reproducible snippet, please
-   be specific about what models, data and functions that are involved.
-
-1. If an exception is raised, please provide the full traceback.
-
-1. Please include your operating system type and version number,
-   as well as your laguage (python, javacript) version and other
-   important packages such as scikit-learn, numpy, and scipy.
-
-### How to write a good Feature Request
+### How to write a feature request
 
 When submitting a feature request, please try and:
 
-- Be clear as possible
+- Be as clear as possible.
+- Include relevant documentation, wireframes, etc.
 
-- Include relevant documentation wireframes etc.
+### How to write a bug report
 
-## Feature Implementation - Contributing Code
+When submitting a bug report, please try and:
 
-Feature requests and bug fixes become a feature implementation
-issue when anyone has a eureka moment.
-The aim of the feature implementation issue is to identify
-the steps to complete the feature/fix.
-This is done to help the less confident pick up tasks and get clear
-steps on how to complete a PR.
-
-When you've found a feature to implement and are ready to contribute
-to a repo, then begin by forking it on GitHub,
-then submit a “pull request” (PR).
-
-The first few steps are generic to all Opt Out Tools repos
-and involves setting up your git repository:
-
-1. Create an account on GitHub if you do not already have one.
-
-1. Fork the project repo: click on the ‘Fork’ button
-   near the top of the page.
-   This creates a copy of the code under your account
-   on the GitHub user account.
-   For more details on how to fork a repository see
-   <https://help.github.com/en/github/getting-started-with-github/fork-a-repo>
-
-1. Clone your fork of the repo from your GitHub account to your local disk
-
-Once these steps are complete please see the individual README.md
-for specific installation details.
-
-### Pull Request Checklist
-
-#### Research
-
-Please make sure that the naming convention fits current standards and that
-the notebook is in the correct folder. Also please make sure your notebook
-is explained clearly, because if it takes a while to understand, there's a
-lower chance the PR will be accepted.
-
-If you have written a function that you think _"wow that is so great/useful
-I think others should have access to it"_ then this brilliant piece of code
-belongs in the src/ folder! Please see the toolkit heading for contributing
-this code.
-
-#### Production
-
-Eventually there will be a validation suite to check the input, interface
-and benchmarking of the production model.
-There will also be the facility to use Sphinx documentation
-to explain the model.
-
-Please make sure you have used DVC correctly to rerun building the model.
-
-#### Tool-kit
-
-Coming soon
-
-#### General
-
-Before a PR can be merged, it needs to be approved by one core developer.
-Please prefix the title of your pull request with [MRG] if the
-contribution is complete and should be subjected to a detailed review.
-An incomplete contribution – where you expect to do more
-work before receiving a full review – should be prefixed with [WIP]
-(to indicate a work in progress) and changed to [MRG] when it matures.
-For a more detailed explanation of what these mean to the
-organization please see [Project Management](#Project-Management).
-
-In order to ease the reviewing process, we recommend that your
-contribution complies with the following rules before
-marking a PR as [MRG].
-The bolded ones are especially important:
-
-- Give your pull request a helpful title that summarises what
-  your contribution does
-  This title will often become the commit message once merged
-  so it should summarize your contribution.
-  In some cases “Fix \<ISSUE TITLE\>” is enough.
-  “Fix #\<ISSUE NUMBER\>” is never a good title.
-- Make sure your code passes the tests.
-- Make sure your code is properly commented and documented,
-  and make sure the documentation renders properly
-- Tests are necessary for enhancements to be accepted.
-- Make sure that your PR does not add any linter violations.
-
-Follow the Coding guidelines:
-
-- When applicable, use the validation tools and scripts.
-
-- Often pull requests resolve one or more other issues (or pull requests).
-  If merging your pull request means that some other issues/PRs
-  should be closed, you should use keywords to create link
-  to them (e.g., Fixes #1234; multiple issues/PRs are allowed
-  as long as each one is preceded by a keyword).
-  Upon merging, those issues/PRs will automatically be closed by GitHub.
-  If your pull request is simply related to some other issues/PRs,
-  create a link to them without using the keywords (e.g., See also #1234).
-
-- New features often need to be illustrated with narrative documentation
-  in the user guide, with small code snippets.
-  If relevant, please also add references in the literature,
-  with PDF links when possible.
-
-### CI/CD
-
-We have Circle CI in two of our code repos.
-
-### Branch Naming Convention
-
-We use a branch for each major release, and tags on
-that branch for each minor release.
-
-For example, beta users will use a beta or a release candidate,
-which will have a 0.2beta1 release name and tag on the 0.2.X branch.
-
-## Contributing Anything Other than Code
-
-Non code contributions are vital to this project. A prime example of this is
- sharing papers and notes. We do this via the wiki attached to this project.
-
-## Code of Conduct
-
-Please note that this project is released with a
-[Contributor Code of Conduct](https://github.com/opt-out-tools/opt-out/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+- Include a short reproducible code snippet. If your snippet is longer than
+50 lines, please link to a gist or a Github repo. If you cannot include a
+reproducible snippet, please be specific about the models, data and functions
+involved in the bug.
+- Provide the full traceback if an exception is raised.
+- Include your operating system type and version number, as well as your
+language version (python, javacript) and other important packages such as
+scikit-learn, numpy, and scipy.
