@@ -1,6 +1,23 @@
 import sys
 import joblib
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.base import BaseEstimator, TransformerMixin
+
+
+class SpacyTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
+
+    def fit(self):
+        self.spacy_ = spacy.load()
+        return self
+
+    def transform(self, X, y=None):
+        return spacy.magic(X)
+
+from sklearn.pipeline import make_pipeline
+from sklearn.ensemble import RandomForestClassifier
+
 
 
 def main():

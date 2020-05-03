@@ -7,7 +7,6 @@ import spacy
 
 np.random.seed(42)
 
-
 def main():
     """Take text from input dataframe and vectorize it to build a feature matrix"""
     try:
