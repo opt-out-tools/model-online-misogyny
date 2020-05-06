@@ -1,11 +1,13 @@
-md5: a5d216215cd92e56ff55b6ba725d7b5f
+md5: 7a7da7355fcd85a4b9e17c3fee4e8d36
 cmd: python src/train.py data/prepared-data-train.csv models/misog-model.joblib
 wdir: ..
 deps:
+- md5: b00339a847189ae7f5b00663f41d5a48
+  path: src/train.py
 - md5: d9319ef5077ddc3d3b9ddcbbd60138a4
   path: data/prepared-data-train.csv
 outs:
-- md5: b9aea4d4aeded39ade603cb8820a14ce
+- md5: fbd8089edade2ec592ede83bc3796326
   path: models/misog-model.joblib
   cache: true
   metric: false

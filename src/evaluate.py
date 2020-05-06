@@ -2,7 +2,7 @@ import sys
 from time import time
 from pathlib import Path
 import json
-import joblib
+import cloudpickle
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -36,7 +36,7 @@ def load_artifacts(test_set_file, trained_model_file):
     print("Loading language model...")
     nlp = spacy.load("en_core_web_md")
     print("Loading machine-learning model...")
-    model = joblib.load(trained_model_file)
+    model = cloudpickle.load(trained_model_file)
     return model, nlp, test_data
 
 
@@ -71,16 +71,20 @@ def main():
         print(f"Error: {error}. Please specify all input and output files!")
         sys.exit()
     # Load artifacts (this should be a one-time action in the API)
-    model, nlp, test_data = load_artifacts(test_set_file, trained_model_file)
+    # model, nlp, test_data = load_artifacts(test_set_file, trained_model_file)
+    test_data = pd.read_csv(test_set_file)
     x_test, y_test = test_data["text"], test_data["label"]
     # Prediction
     # ## Start recording prediction time from here ##
     start_time = time()
+
+    with open(trained_model_file, "rb") as handler:
+        model = cloudpickle.load(handler)
     # The .pipe() method batch processes all the text (might take a little while)
-    print("Creating embeddings...")
-    docs = list(nlp.pipe(x_test))
-    feature_matrix = np.array(list(map(lambda x: x.vector, docs)))
-    y_prob = model.predict_proba(feature_matrix)
+    # print("Creating embeddings...")
+    # docs = list(nlp.pipe(x_test))
+    # feature_matrix = np.array(list(map(lambda x: x.vector, docs)))
+    y_prob = model.predict_proba(x_test)
     duration = time() - start_time
     print(f"Avg. single prediction time: {duration/len(y_prob)} s")
     write_results(output_folder, y_test, y_prob)
