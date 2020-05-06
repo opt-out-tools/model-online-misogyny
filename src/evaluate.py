@@ -70,8 +70,6 @@ def main():
     except (IndexError, ValueError) as error:
         print(f"Error: {error}. Please specify all input and output files!")
         sys.exit()
-    # Load artifacts (this should be a one-time action in the API)
-    # model, nlp, test_data = load_artifacts(test_set_file, trained_model_file)
     test_data = pd.read_csv(test_set_file)
     x_test, y_test = test_data["text"], test_data["label"]
     # Prediction
@@ -80,10 +78,6 @@ def main():
 
     with open(trained_model_file, "rb") as handler:
         model = cloudpickle.load(handler)
-    # The .pipe() method batch processes all the text (might take a little while)
-    # print("Creating embeddings...")
-    # docs = list(nlp.pipe(x_test))
-    # feature_matrix = np.array(list(map(lambda x: x.vector, docs)))
     y_prob = model.predict_proba(x_test)
     duration = time() - start_time
     print(f"Avg. single prediction time: {duration/len(y_prob)} s")

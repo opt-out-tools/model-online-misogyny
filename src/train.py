@@ -20,36 +20,15 @@ def main():
     except (IndexError, ValueError) as error:
         print(error)
         print("Error: please specify input and output files.")
+        raise
 
     # # Featurizer here
     df_in = pd.read_csv(input_file)
-    # print("Loading language model...")
-    # nlp = spacy.load("en_core_web_md")
-    # # The .pipe() method batch processes all the text (will take a little while)
-    # print("Creating embeddings...")
-    # docs = list(nlp.pipe(df_in["text"]))
-    # feature_matrix = np.array(list(map(lambda x: x.vector, docs)))
 
-    classifier = HistGradientBoostingClassifier(
-        verbose=2,
-        # n_estimators=400, random_state=42, n_jobs=-1, verbose=2
-    )
+    classifier = HistGradientBoostingClassifier(verbose=2)
     pipeline = make_pipeline(SpacyTransformer(), classifier)
     pipeline.fit(df_in["text"], df_in["label"])
 
-    # print(f"Input: {input_file}")
-    # print(f"Output: {output_file}")
-    # with open(input_file, "rb") as handler:
-    #     feature_matrix = cloudpickle.load(handler)
-    # labels = feature_matrix[:, -1]
-    # feature_matrix = feature_matrix[:, :-1]
-    # print(f"The feature matrix has dimensions {feature_matrix.shape}.")
-    # classifier = RandomForestClassifier(
-    #     n_estimators=400, random_state=42, n_jobs=-1, verbose=2
-    # )
-    # x_train = feature_matrix
-    # print("Training model...")
-    # classifier.fit(x_train, labels)
     with open(output_file, "wb") as handler:
         cloudpickle.dump(pipeline, handler)  # , compress="zlib")
 
