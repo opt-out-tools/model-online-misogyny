@@ -1,4 +1,4 @@
-# pylint: disable=C0103,W0613,W0201
+# pylint: disable=C0103,W0613,W0201, E1120
 import numpy as np
 import spacy
 from sklearn.base import BaseEstimator, TransformerMixin
