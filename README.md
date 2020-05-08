@@ -72,7 +72,6 @@ This repository is managed by the **Opt Out Tools** data team. If you have any q
 please reach out to one of the following members of the team on Github:
 
 - Andrada: `andra-pumnea`
-- Matteo: `teoguso`
 - Verena: `Ver2307`
 
 ## Repository status
