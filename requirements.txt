@@ -12,8 +12,8 @@ numpy==1.18.4
 pandas==1.0.3
 pre-commit==2.3.0
 flake8==3.7.9
-pyflakes==2.1.1
 pylint==2.5.2
 spacy==2.2.4
 cloudpickle==1.4.1
 scikit-learn==0.22.2
+pytest==5.4.2
