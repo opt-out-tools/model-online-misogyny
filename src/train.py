@@ -1,11 +1,11 @@
 # pylint: disable=C0103,W0613,W0201,W0611
 import logging
 import sys
-import cloudpickle
 import pandas as pd
 from sklearn.experimental import enable_hist_gradient_boosting  # noqa
 from sklearn.pipeline import make_pipeline
 from sklearn.ensemble import HistGradientBoostingClassifier
+import cloudpickle
 
 from src.transformers import SpacyTransformer
 
