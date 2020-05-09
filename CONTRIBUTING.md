@@ -71,13 +71,13 @@ pre-commit install
 5. In your terminal, use the following command to create a new Conda environment:
 
 ```bash
-conda create -n <name_for_your_environment> python=3.7
+conda create -n model-online-misogyny python=3.8
 ```
 
 6. Activate the environment using the following command:
 
 ```bash
-conda activate <name_for_your_environment>
+conda activate model-online-misogyny
 ```
 
 7. At the root of the repository, install the dependencies with the below command:
