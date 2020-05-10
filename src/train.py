@@ -25,7 +25,7 @@ def main():
     # # Featurizer here
     df_in = pd.read_csv(input_file)
 
-    classifier = HistGradientBoostingClassifier(verbose=2)
+    classifier = HistGradientBoostingClassifier(max_iter=50, verbose=2)
     pipeline = make_pipeline(SpacyTransformer(), classifier)
     pipeline.fit(df_in["text"], df_in["label"])
 
