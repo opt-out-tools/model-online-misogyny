@@ -18,6 +18,7 @@ class SpacyTransformer(BaseEstimator, TransformerMixin):
         try:
             docs = list(self.nlp_.pipe(X))
         except OSError:
+            # This is needed when the language model is not pickled with the transformer itself
             self.nlp_ = spacy.load("en_core_web_md")
             docs = list(self.nlp_.pipe(X))
 
