@@ -1,20 +1,20 @@
-md5: 220d0157b4c69cd45c029c3ac99333ad
+md5: b19b7f0b5bfc688dfd01c54661968a05
 cmd: python src/evaluate.py data/prepared-data-test.csv models/misog-model.joblib
   reports
 deps:
-- md5: 981da9e4e1849a5834cb96070a6c3376
+- md5: 96ab5282456ea2d964744e44305865fa
   path: src/evaluate.py
 - md5: 1ffd2f30f59d3c9772d7aa631dcb2e6f
   path: data/prepared-data-test.csv
-- md5: 758336a6be2a6b02374a85f037c967af
+- md5: aaa60e0d17fd8590b5511dd88cbb25fd
   path: models/misog-model.joblib
 outs:
-- md5: bd47f058c292407212377d955c9a27b0
+- md5: 7a1909243b27431b632f9c2f35ed0f0f
   path: reports/roc_auc_f1.png
   cache: true
   metric: false
   persist: false
-- md5: 9d84b46ee206ef4fa2365169fc20ee0e
+- md5: 92da390651da58c7a479470e1eb69dab
   path: reports/eval.json
   cache: false
   metric: true

@@ -34,8 +34,6 @@ experimenting with machine learning algorithms.
 ## Repository structure
 
     ├── .circleci               <- Folder containing the CircleCI configuration file for this repository.
-    ├── .dvc                    <- Folder containing the DVC configuration file for this repository +
-    │                              instructions on how to use DVC.
     ├── .github/ISSUE_TEMPLATE  <- Folder containing templates to create different types of issues for this
     │                              repository.
     ├── data                    <- Folder for copying the OOT dataset and for documenting other datasets that  
@@ -54,7 +52,6 @@ experimenting with machine learning algorithms.
     ├── tests                   <- Folder for saving tests for the machine learning pipeline to make sure that
     │                              the source code works as expected.
     ├── .flake8                 <- Linter file necessary to format code to the OOT standards.
-    ├── .gitignore              <- List of the files not to add to this repository when committing to it.
     ├── .pre-commit-config.yaml <- List of the scripts run at the pre-commit stage.
     ├── .pylintrc               <- Linter file necessary to format code to the OOT standards.
     ├── CONTRIBUTING.md         <- Instructions on how to contribute to this repository.

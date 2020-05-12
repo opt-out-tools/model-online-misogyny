@@ -1,11 +1,15 @@
 # Datasets targeting sexism
  
-The goal of this page is to provide a survey of existing datasets targeting sexism in social media, 
-along with a summary of the data collection and labeling mechanism and potential issues. This should give 
-a good overview of which datasets can and should be used in research, as well as learnings about how to
+The goal of this page is to provide a survey of existing
+datasets targeting sexism in social media, 
+along with a summary of the data collection and labeling
+mechanism and potential issues.
+This should give a good overview of which datasets can
+and should be used in research, as well as learnings about how to
 improve our own collection and labeling process. 
 
-If you want to add a dataset to this page, please make sure to include the info bellow: 
+If you want to add a dataset to this page, please
+make sure to include the info bellow: 
 
 - paper/blogpost that accompany the published dataset as title
 - description
