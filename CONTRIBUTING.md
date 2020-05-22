@@ -6,10 +6,10 @@ this repository.
 Quick links:
 
 - [Requirements](#Requirements)
+- [Submitting an issue](#Submitting-an-issue)
 - [Finding an issue to work on](#Finding-an-issue-to-work-on)
 - [Working on a research issue](#Working-on-a-research-issue)
 - [Working on a modeling issue](#Working-on-a-modeling-issue)
-- [Submitting an issue](#Submitting-an-issue)
 
 ## Requirements
 
@@ -24,11 +24,11 @@ __TODO:__ Add a way to obtain a/the dataset.
 
 *TBD*
 
-### Install dependencies
+### Repo download and setup
 
-Please follow the below steps to set up the repository on your local disk:
+Please follow the below steps to set up the repository
+on your local disk:
 
-1. Make sure you have requested the [**OOT** dataset](#OOT-dataset).
 1. [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
    the repository and
    [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -36,13 +36,14 @@ Please follow the below steps to set up the repository on your local disk:
 1. Copy the **OOT** dataset in the `data` folder of the repository and
    rename it to `gold_data_en.csv`.
 
-1. (_optional but strongly recommended_) Make sure you have _conda_ installed
-   (you can get it with the
+### Dependencies
+
+1. *(optional but strongly recommended)* Make sure you have
+   _conda_ installed (you can get it with the
    [Anaconda distribution](https://www.anaconda.com/products/individual#Downloads))
    and then follow these steps:
 
-   - In your terminal, use the following command to create a new
-     Conda environment:
+   - In your terminal, create a new Conda environment:
 
      ```bash
      conda create -n model-online-misogyny python=3.8
@@ -54,18 +55,10 @@ Please follow the below steps to set up the repository on your local disk:
      conda activate model-online-misogyny
      ```
 
-1. At the root of the repository, install the dependencies with
-   the below command:
+1. At the root of the repository, install the dependencies:
 
    ```bash
    pip install -r requirements.txt
-   ```
-
-1. Download the spaCy language model needed for our machine
-   learning pipeline with the following command:
-
-   ```bash
-   python -m spacy download en_core_web_md
    ```
 
 1. Run the following command to set up the
@@ -75,9 +68,72 @@ Please follow the below steps to set up the repository on your local disk:
    pre-commit install
    ```
 
+1. (depending on the pipeline setup) download the spaCy
+   language model needed for our machine
+   learning pipeline with the following command:
+
+   ```bash
+   python -m spacy download en_core_web_md
+   ```
+
 Congratulations, you're all set!
 
-## Finding an issue to work on
+## Start to contribute
+
+You can contribute in many ways to this repository, mainly
+in the form of Jupyter Notebooks, Python code, or documentation.
+
+### Jupyter notebooks
+
+Brief example of Jupyter notebook [...]
+
+Specifics on how/when jupyter notebooks will be accepted?
+
+### Python code
+
+Mainly related to the pipeline [...]
+
+### Documentation
+
+Here we should introduce the wiki. [...]
+
+## Integrate your contribution into the repository
+
+### Submitting an issue
+
+We use Github issues to track all bugs and feature requests,
+feel free to
+[open](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
+one if you have found a bug or wish to request a feature.
+
+Before submitting an issue, please do the following:
+
+- Verify that your issue is not being currently addressed by
+other issues or pull requests.
+- Read the instructions on how to write a feature request or
+  a bug report in the sections below.
+
+#### How to write a feature request
+
+When submitting a feature request, please try and:
+
+- Be as clear as possible.
+- Include relevant documentation, wireframes, etc.
+
+#### How to write a bug report
+
+When submitting a bug report, please try and:
+
+- Include a short reproducible code snippet. If your snippet is longer than
+50 lines, please link to a gist or a Github repo. If you cannot include a
+reproducible snippet, please be specific about the models, data and functions
+involved in the bug.
+- Provide the full traceback if an exception is raised.
+- Include your operating system type and version number, as well as your
+language version (python, javacript) and other important packages such as
+scikit-learn, numpy, and scipy.
+
+### Finding an issue to work on
 
 You can find issues to work on in the following places:
 
@@ -86,10 +142,11 @@ You can find issues to work on in the following places:
 
 When choosing an issue to work on:
 
-- If the issue is unassigned, comment on the issue that you would like to take
-care of it and someone in the data team will assign you.
-- If the issue is already assigned to someone, contact that person on Slack or
-Github to see how you can work with them.
+- If the issue is unassigned, comment on the issue that you
+  would like to take care of it and someone in the data team
+  will assign you.
+- If the issue is already assigned to someone, contact that
+  person on Slack or Github to see how you can work with them.
 
 Once you are assigned on an issue:
 
@@ -99,12 +156,7 @@ Once you are assigned on an issue:
 - Push it to GitHub and submit a Pull Request when your
   contribution is ready.
 
-
-**TODO: STREAMLINE AND SIMPLIFY THE PART THAT FOLLOWS**
-
-**TODO: EXPAND AND COMPLETE DVC USAGE**
-
-### Working on a research issue
+#### Working on a research issue
 
 Please follow the below steps if your issue is about researching and/or
 analyzing a dataset or experimenting an algorithm:
@@ -150,7 +202,7 @@ to them without using the keywords (e.g., "See also #1234").
 
 Congratulations, you have contributed research to the **OOT** project!
 
-### Working on a modeling issue
+#### Working on a modeling issue
 
 Please follow the below steps if your issue is about implementing or
 enhancing a code feature (e.g. new algorithm, algorithm enhancement,
@@ -219,41 +271,7 @@ a link to them without using the keywords (e.g., "See also #1234").
 
 Congratulations, you have contributed code to the **OOT** project!
 
-## Submitting an issue
-
-We use Github issues to track all bugs and feature requests,
-feel free to
-[open](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
-one if you have found a bug or wish to request a feature.
-
-Before submitting an issue, please do the following:
-
-- Verify that your issue is not being currently addressed by
-other issues or pull requests.
-- Read the instructions on how to write a feature request or
-  a bug report in the sections below.
-
-### How to write a feature request
-
-When submitting a feature request, please try and:
-
-- Be as clear as possible.
-- Include relevant documentation, wireframes, etc.
-
-### How to write a bug report
-
-When submitting a bug report, please try and:
-
-- Include a short reproducible code snippet. If your snippet is longer than
-50 lines, please link to a gist or a Github repo. If you cannot include a
-reproducible snippet, please be specific about the models, data and functions
-involved in the bug.
-- Provide the full traceback if an exception is raised.
-- Include your operating system type and version number, as well as your
-language version (python, javacript) and other important packages such as
-scikit-learn, numpy, and scipy.
-
-### About the software we use
+## About the software we use
 
 - [Jupyter Notebook](https://jupyter.org/install)
 - [Python](https://www.python.org/downloads/)
