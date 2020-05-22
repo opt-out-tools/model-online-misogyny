@@ -1,6 +1,7 @@
 # Contributor's Guide
 
-The purpose of this guide is to help you contribute to this repository.
+The purpose of this guide is to help you contribute to
+this repository.
 
 Quick links:
 
@@ -18,6 +19,8 @@ To work on any type of issue in this repository, you need the
 **OOT** dataset.
 
 Please follow the below instructions to request it:
+
+__TODO:__ Add a way to obtain a/the dataset.
 
 *TBD*
 
@@ -167,7 +170,7 @@ enhancing a code feature (e.g. new algorithm, algorithm enhancement,
    ```bash
    dvc repro
    ```
-   For more information on how to use DVC, please see [DVC.md](DVC.md).
+   For more information on how to use DVC, please see [DVC.md](references/DVC.md).
 
    4. Run the tests to check your code works with the machine learning pipeline using
    this command:
