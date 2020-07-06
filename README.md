@@ -2,7 +2,8 @@
 <img width="250" height="250" src="opt_out_logo.png">
 </p>
 
-# Opt Out Tools Machine Learning R&D Repository
+# Opt Out Tools Machine Learning R&D
+[![CircleCI](https://circleci.com/gh/opt-out-tools/model-online-misogyny.svg?style=svg)](https://circleci.com/gh/opt-out-tools/model-online-misogyny)
 
 Welcome to the **Opt Out Tools (OOT)** Machine Learning
 R&D repository.
@@ -25,13 +26,13 @@ in this repository to know how you can contribute to it.
 
 Quick links:
 
-- [Repository purpose](#Repository-purpose)
-- [Repository structure](#Repository-structure)
+- [Purpose](#Purpose)
 - [Repository management](#Repository-management)
 - [Repository status](#Repository-status)
 - [Code of conduct](#Code-of-conduct)
+- [Repository structure](#Repository-structure)
 
-## Repository purpose
+## Purpose
 
 This repository has two purposes:
 
@@ -40,6 +41,32 @@ This repository has two purposes:
   algorithms.
 - Building a machine learning model for the browser extension
   based on our research.
+
+## Repository management
+
+This repository is managed by the **Opt Out Tools** data team.
+If you have any question, please reach out to one of the
+following members of the team on Github:
+
+- Andrada: `andra-pumnea`
+- Verena: `Ver2307`
+
+## Repository status
+
+We use [CircleCI](https://circleci.com/) for
+[CI/CD](https://en.wikipedia.org/wiki/CI/CD).
+You can always check if anything is broken in the repository
+in this section.
+
+**NOTE: We do not currently have an automated model
+deployment mechanism.**
+
+## Code of conduct
+
+Please note that this repository is part of the **Opt
+Out Tools** project which is released with a
+[Contributor Code of Conduct](https://github.com/opt-out-tools/opt-out/blob/master/CODE_OF_CONDUCT.md).
+By participating in this project you agree to abide by its terms.
 
 ## Repository structure
 
@@ -69,35 +96,6 @@ This repository has two purposes:
     ├── opt_out_logo.png        <- Logo used in the README of this repository.
     ├── requirements.txt        <- Python dependencies file.
     └── setup.py                <- Python package installation file.
-
-## Repository management
-
-This repository is managed by the **Opt Out Tools** data team.
-If you have any question, please reach out to one of the
-following members of the team on Github:
-
-- Andrada: `andra-pumnea`
-- Verena: `Ver2307`
-
-## Repository status
-
-We use [CircleCI](https://circleci.com/) for
-[CI/CD](https://en.wikipedia.org/wiki/CI/CD).
-You can always check if anything is broken in the repository
-in this section.
-
-Current status:
-[![CircleCI](https://circleci.com/gh/opt-out-tools/model-online-misogyny.svg?style=svg)](https://circleci.com/gh/opt-out-tools/model-online-misogyny)
-
-**NOTE: We do not currently have an automated model
-deployment mechanism.**
-
-## Code of conduct
-
-Please note that this repository is part of the **Opt
-Out Tools** project which is released with a
-[Contributor Code of Conduct](https://github.com/opt-out-tools/opt-out/blob/master/CODE_OF_CONDUCT.md).
-By participating in this project you agree to abide by its terms.
 
 --------
 
